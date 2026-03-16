@@ -24,9 +24,27 @@ namespace SILAKBO.Forms
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            if (txtUsername.Text.Trim() == "" || txtPassword.Text.Trim() == "")
+            if (txtUsername.Text.Trim() == "" && txtPassword.Text.Trim() == "")
             {
-                MessageBox.Show("Please enter a username and password.");
+                MessageBox.Show("Please fill up all fields.");
+                return;
+            }
+
+            if (txtUsername.Text.Trim() == "")
+            {
+                MessageBox.Show("Please enter a username.");
+                return;
+            }
+
+            if (txtPassword.Text.Trim() == "")
+            {
+                MessageBox.Show("Please enter a password.");
+                return;
+            }
+
+            if (cmbGender.Text.Trim() == "")
+            {
+                MessageBox.Show("Please select a gender.");
                 return;
             }
 

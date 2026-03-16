@@ -31,6 +31,13 @@ namespace SILAKBO
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            // CHECK EMPTY INPUTS FIRST
+            if (txtUsername.Text.Trim() == "" || txtPassword.Text.Trim() == "")
+            {
+                MessageBox.Show("Please enter your username and password.");
+                return;
+            }
+
             UserService service = new UserService();
 
             User user = service.Login(txtUsername.Text, txtPassword.Text);
