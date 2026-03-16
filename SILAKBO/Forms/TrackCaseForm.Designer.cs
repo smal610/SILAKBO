@@ -71,6 +71,7 @@
             btnTrack.TabIndex = 3;
             btnTrack.Text = "Track Case";
             btnTrack.UseVisualStyleBackColor = true;
+            btnTrack.Click += btnTrack_Click;
             // 
             // label3
             // 
@@ -103,6 +104,7 @@
             Controls.Add(label1);
             Name = "TrackCaseForm";
             Text = "TrackCaseForm";
+            Load += TrackCaseForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
