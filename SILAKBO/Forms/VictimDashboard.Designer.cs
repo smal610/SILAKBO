@@ -42,19 +42,19 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Monotype Corsiva", 36F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Maroon;
-            label1.Location = new Point(39, 68);
+            label1.Location = new Point(39, 49);
             label1.Name = "label1";
-            label1.Size = new Size(596, 57);
+            label1.Size = new Size(232, 57);
             label1.TabIndex = 0;
-            label1.Text = "SILAKBO – Victim Dashboard";
+            label1.Text = "SILAKBO ";
             label1.Click += label1_Click;
             // 
             // btnReport
             // 
             btnReport.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
-            btnReport.Location = new Point(421, 256);
+            btnReport.Location = new Point(179, 179);
             btnReport.Name = "btnReport";
-            btnReport.Size = new Size(545, 115);
+            btnReport.Size = new Size(545, 100);
             btnReport.TabIndex = 1;
             btnReport.Text = "Submit Report";
             btnReport.UseVisualStyleBackColor = true;
@@ -63,9 +63,9 @@
             // btnResources
             // 
             btnResources.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
-            btnResources.Location = new Point(421, 558);
+            btnResources.Location = new Point(179, 435);
             btnResources.Name = "btnResources";
-            btnResources.Size = new Size(545, 115);
+            btnResources.Size = new Size(545, 100);
             btnResources.TabIndex = 2;
             btnResources.Text = "View Support Resources";
             btnResources.UseVisualStyleBackColor = true;
@@ -74,9 +74,9 @@
             // btnTrack
             // 
             btnTrack.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
-            btnTrack.Location = new Point(421, 407);
+            btnTrack.Location = new Point(179, 307);
             btnTrack.Name = "btnTrack";
-            btnTrack.Size = new Size(545, 115);
+            btnTrack.Size = new Size(545, 100);
             btnTrack.TabIndex = 3;
             btnTrack.Text = "Track Case";
             btnTrack.UseVisualStyleBackColor = true;
@@ -85,7 +85,7 @@
             // btnLogout
             // 
             btnLogout.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLogout.Location = new Point(1251, 68);
+            btnLogout.Location = new Point(772, 61);
             btnLogout.Name = "btnLogout";
             btnLogout.Size = new Size(101, 45);
             btnLogout.TabIndex = 4;
@@ -99,7 +99,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1397, 839);
+            ClientSize = new Size(924, 616);
             Controls.Add(btnLogout);
             Controls.Add(btnTrack);
             Controls.Add(btnResources);

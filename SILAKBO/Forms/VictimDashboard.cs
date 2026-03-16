@@ -28,7 +28,7 @@ namespace SILAKBO.Forms
 
         private void btnResources_Click(object sender, EventArgs e)
         {
-            ViewSupportResourcesForm resources = new ViewSupportResourcesForm();
+            ResourcesForm resources = new ResourcesForm();
             resources.Show();
         }
 

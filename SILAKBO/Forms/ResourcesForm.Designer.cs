@@ -37,25 +37,27 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(29, 36);
+            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(39, 46);
             label1.Name = "label1";
-            label1.Size = new Size(105, 15);
+            label1.Size = new Size(197, 30);
             label1.TabIndex = 0;
             label1.Text = "Support Resources";
             // 
             // dgvResources
             // 
             dgvResources.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvResources.Location = new Point(39, 141);
+            dgvResources.Location = new Point(39, 153);
             dgvResources.Name = "dgvResources";
-            dgvResources.Size = new Size(708, 150);
+            dgvResources.Size = new Size(845, 150);
             dgvResources.TabIndex = 1;
             // 
             // btnRefresh
             // 
-            btnRefresh.Location = new Point(361, 82);
+            btnRefresh.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnRefresh.Location = new Point(804, 101);
             btnRefresh.Name = "btnRefresh";
-            btnRefresh.Size = new Size(75, 23);
+            btnRefresh.Size = new Size(80, 34);
             btnRefresh.TabIndex = 2;
             btnRefresh.Text = "Refresh";
             btnRefresh.UseVisualStyleBackColor = true;
@@ -65,7 +67,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(924, 616);
             Controls.Add(btnRefresh);
             Controls.Add(dgvResources);
             Controls.Add(label1);
