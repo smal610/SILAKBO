@@ -123,6 +123,7 @@
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Monotype Corsiva", 93.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.Indigo;
             label4.Location = new Point(576, 47);
             label4.Name = "label4";
             label4.Size = new Size(559, 152);
