@@ -50,7 +50,11 @@ namespace SILAKBO.Forms
 
             UserService service = new UserService();
 
-            bool success = service.Register(txtUsername.Text, txtPassword.Text);
+            bool success = service.Register(
+                txtUsername.Text,
+                txtPassword.Text,
+                cmbGender.Text
+            );
 
             if (success)
             {

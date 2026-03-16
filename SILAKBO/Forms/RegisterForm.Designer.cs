@@ -39,6 +39,8 @@
             label4 = new Label();
             label5 = new Label();
             btnLogin = new Button();
+            label6 = new Label();
+            dateTimePicker1 = new DateTimePicker();
             SuspendLayout();
             // 
             // label1
@@ -67,7 +69,7 @@
             btnRegister.BackColor = Color.SeaGreen;
             btnRegister.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRegister.ForeColor = Color.White;
-            btnRegister.Location = new Point(643, 415);
+            btnRegister.Location = new Point(643, 426);
             btnRegister.Margin = new Padding(3, 2, 3, 2);
             btnRegister.Name = "btnRegister";
             btnRegister.Size = new Size(431, 49);
@@ -81,7 +83,7 @@
             cmbGender.Font = new Font("Segoe UI", 12F);
             cmbGender.FormattingEnabled = true;
             cmbGender.Items.AddRange(new object[] { "Female" });
-            cmbGender.Location = new Point(760, 361);
+            cmbGender.Location = new Point(760, 327);
             cmbGender.Margin = new Padding(3, 2, 3, 2);
             cmbGender.Name = "cmbGender";
             cmbGender.Size = new Size(314, 29);
@@ -92,7 +94,7 @@
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            label2.Location = new Point(643, 301);
+            label2.Location = new Point(643, 283);
             label2.Name = "label2";
             label2.Size = new Size(86, 21);
             label2.TabIndex = 4;
@@ -101,7 +103,7 @@
             // txtPassword
             // 
             txtPassword.Font = new Font("Segoe UI", 12F);
-            txtPassword.Location = new Point(760, 293);
+            txtPassword.Location = new Point(760, 275);
             txtPassword.Margin = new Padding(3, 2, 3, 2);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(314, 29);
@@ -112,7 +114,7 @@
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            label3.Location = new Point(643, 369);
+            label3.Location = new Point(643, 335);
             label3.Name = "label3";
             label3.Size = new Size(70, 21);
             label3.TabIndex = 6;
@@ -135,7 +137,7 @@
             label5.AutoSize = true;
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(643, 487);
+            label5.Location = new Point(643, 499);
             label5.Name = "label5";
             label5.Size = new Size(186, 21);
             label5.TabIndex = 8;
@@ -155,6 +157,25 @@
             btnLogin.UseVisualStyleBackColor = false;
             btnLogin.Click += btnLogin_Click;
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = Color.Transparent;
+            label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Location = new Point(643, 380);
+            label6.Name = "label6";
+            label6.Size = new Size(79, 21);
+            label6.TabIndex = 10;
+            label6.Text = "Birthday:";
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.CalendarFont = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dateTimePicker1.Location = new Point(760, 380);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(314, 23);
+            dateTimePicker1.TabIndex = 11;
+            // 
             // RegisterForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -162,6 +183,8 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1184, 641);
+            Controls.Add(dateTimePicker1);
+            Controls.Add(label6);
             Controls.Add(btnLogin);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -191,5 +214,7 @@
         private Label label4;
         private Label label5;
         private Button btnLogin;
+        private Label label6;
+        private DateTimePicker dateTimePicker1;
     }
 }
