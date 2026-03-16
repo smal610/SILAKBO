@@ -39,10 +39,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(263, 108);
+            label1.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(62, 52);
             label1.Name = "label1";
-            label1.Size = new Size(378, 65);
+            label1.Size = new Size(232, 40);
             label1.TabIndex = 0;
             label1.Text = "Track Your Case";
             label1.Click += label1_Click;
@@ -51,7 +51,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F);
-            label2.Location = new Point(262, 240);
+            label2.Location = new Point(61, 154);
             label2.Name = "label2";
             label2.Size = new Size(184, 21);
             label2.TabIndex = 1;
@@ -60,18 +60,19 @@
             // txtReference
             // 
             txtReference.Font = new Font("Segoe UI", 12F);
-            txtReference.Location = new Point(263, 284);
+            txtReference.Location = new Point(263, 146);
             txtReference.Name = "txtReference";
-            txtReference.Size = new Size(374, 29);
+            txtReference.Size = new Size(532, 29);
             txtReference.TabIndex = 2;
             txtReference.TextAlign = HorizontalAlignment.Center;
+            //txtReference.TextChanged += txtReference_TextChanged;
             // 
             // btnTrack
             // 
             btnTrack.Font = new Font("Segoe UI", 12F);
-            btnTrack.Location = new Point(262, 337);
+            btnTrack.Location = new Point(263, 209);
             btnTrack.Name = "btnTrack";
-            btnTrack.Size = new Size(374, 35);
+            btnTrack.Size = new Size(532, 35);
             btnTrack.TabIndex = 3;
             btnTrack.Text = "Track Case";
             btnTrack.UseVisualStyleBackColor = true;
@@ -81,7 +82,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F);
-            label3.Location = new Point(263, 393);
+            label3.Location = new Point(67, 274);
             label3.Name = "label3";
             label3.Size = new Size(55, 21);
             label3.TabIndex = 4;
@@ -91,7 +92,7 @@
             // 
             lblStatus.AutoSize = true;
             lblStatus.Font = new Font("Segoe UI", 12F);
-            lblStatus.Location = new Point(331, 393);
+            lblStatus.Location = new Point(263, 274);
             lblStatus.Name = "lblStatus";
             lblStatus.Size = new Size(28, 21);
             lblStatus.TabIndex = 5;
@@ -101,7 +102,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(924, 616);
+            ClientSize = new Size(920, 612);
             Controls.Add(lblStatus);
             Controls.Add(label3);
             Controls.Add(btnTrack);

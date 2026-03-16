@@ -50,5 +50,10 @@ namespace SILAKBO.Forms
 
             conn.Close();
         }
+
+        //private void txtReference_TextChanged(object sender, EventArgs e)
+        //{
+
+        //}
     }
 }
