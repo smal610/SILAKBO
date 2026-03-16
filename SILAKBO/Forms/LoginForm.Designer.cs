@@ -35,8 +35,9 @@
             txtPassword = new TextBox();
             btnLogin = new Button();
             btnRegister = new Button();
-            label3 = new Label();
             label4 = new Label();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -112,18 +113,6 @@
             btnRegister.UseVisualStyleBackColor = false;
             btnRegister.Click += btnRegister_Click;
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Monotype Corsiva", 93.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.Indigo;
-            label3.Location = new Point(563, 61);
-            label3.Name = "label3";
-            label3.Size = new Size(559, 152);
-            label3.TabIndex = 6;
-            label3.Text = "SILAKBO";
-            // 
             // label4
             // 
             label4.AutoSize = true;
@@ -135,6 +124,16 @@
             label4.TabIndex = 7;
             label4.Text = "Don't have an account?";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(628, 61);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(449, 152);
+            pictureBox1.TabIndex = 8;
+            pictureBox1.TabStop = false;
+            // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -143,8 +142,8 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1184, 641);
+            Controls.Add(pictureBox1);
             Controls.Add(label4);
-            Controls.Add(label3);
             Controls.Add(btnRegister);
             Controls.Add(btnLogin);
             Controls.Add(txtPassword);
@@ -152,11 +151,13 @@
             Controls.Add(label2);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
             Name = "LoginForm";
             Padding = new Padding(10);
             Text = "Form1";
             Load += LoginForm_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -169,7 +170,7 @@
         private TextBox txtPassword;
         private Button btnLogin;
         private Button btnRegister;
-        private Label label3;
         private Label label4;
+        private PictureBox pictureBox1;
     }
 }

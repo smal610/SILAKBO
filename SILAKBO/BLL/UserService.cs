@@ -32,7 +32,7 @@ namespace SILAKBO.BLL
         //}
 
         // Change (string username, string password) to include gender
-        public bool Register(string username, string password, string gender)
+        public bool Register(string username, string password, string gender, DateTime birthdate)
         {
             if (repo.UsernameExists(username))
             {
@@ -47,6 +47,7 @@ namespace SILAKBO.BLL
 
             // Use the variable passed from the form instead of hardcoded "Female"
             user.Gender = gender;
+            user.Birthday = birthdate;
 
             repo.Register(user);
 

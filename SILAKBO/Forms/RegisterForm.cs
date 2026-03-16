@@ -62,7 +62,8 @@ namespace SILAKBO.Forms
             bool success = service.Register(
                 txtUsername.Text,
                 txtPassword.Text,
-                cmbGender.Text
+                cmbGender.Text,
+                dtpBirthday.Value
             );
 
             if (success)

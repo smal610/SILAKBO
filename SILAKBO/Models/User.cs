@@ -15,5 +15,7 @@ namespace SILAKBO.Models
         public string Role { get; set; }
 
         public string Gender { get; set; }
+
+        public DateTime Birthday { get; set; }
     }
 }
