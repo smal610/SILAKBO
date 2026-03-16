@@ -38,3 +38,4 @@ C:\Users\Daniel\source\repos\SILAKBO\SILAKBO\obj\Debug\net10.0-windows\refint\SI
 C:\Users\Daniel\source\repos\SILAKBO\SILAKBO\obj\Debug\net10.0-windows\SILAKBO.pdb
 C:\Users\Daniel\source\repos\SILAKBO\SILAKBO\obj\Debug\net10.0-windows\SILAKBO.genruntimeconfig.cache
 C:\Users\Daniel\source\repos\SILAKBO\SILAKBO\obj\Debug\net10.0-windows\ref\SILAKBO.dll
+C:\Users\Daniel\source\repos\SILAKBO\SILAKBO\obj\Debug\net10.0-windows\SILAKBO.sourcelink.json
