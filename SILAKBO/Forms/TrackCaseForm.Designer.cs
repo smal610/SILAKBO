@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrackCaseForm));
             label1 = new Label();
             label2 = new Label();
             txtReference = new TextBox();
@@ -39,8 +40,9 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(62, 52);
+            label1.Location = new Point(576, 94);
             label1.Name = "label1";
             label1.Size = new Size(232, 40);
             label1.TabIndex = 0;
@@ -50,49 +52,53 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F);
-            label2.Location = new Point(61, 154);
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(575, 196);
             label2.Name = "label2";
-            label2.Size = new Size(184, 21);
+            label2.Size = new Size(196, 21);
             label2.TabIndex = 1;
             label2.Text = "Enter Reference Number:";
             // 
             // txtReference
             // 
             txtReference.Font = new Font("Segoe UI", 12F);
-            txtReference.Location = new Point(263, 146);
+            txtReference.Location = new Point(575, 235);
             txtReference.Name = "txtReference";
             txtReference.Size = new Size(532, 29);
             txtReference.TabIndex = 2;
             txtReference.TextAlign = HorizontalAlignment.Center;
-            //txtReference.TextChanged += txtReference_TextChanged;
             // 
             // btnTrack
             // 
-            btnTrack.Font = new Font("Segoe UI", 12F);
-            btnTrack.Location = new Point(263, 209);
+            btnTrack.BackColor = Color.Indigo;
+            btnTrack.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnTrack.ForeColor = Color.White;
+            btnTrack.Location = new Point(574, 294);
             btnTrack.Name = "btnTrack";
-            btnTrack.Size = new Size(532, 35);
+            btnTrack.Size = new Size(532, 52);
             btnTrack.TabIndex = 3;
             btnTrack.Text = "Track Case";
-            btnTrack.UseVisualStyleBackColor = true;
+            btnTrack.UseVisualStyleBackColor = false;
             btnTrack.Click += btnTrack_Click;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F);
-            label3.Location = new Point(67, 274);
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(575, 374);
             label3.Name = "label3";
-            label3.Size = new Size(55, 21);
+            label3.Size = new Size(59, 21);
             label3.TabIndex = 4;
             label3.Text = "Status:";
             // 
             // lblStatus
             // 
             lblStatus.AutoSize = true;
+            lblStatus.BackColor = Color.Transparent;
             lblStatus.Font = new Font("Segoe UI", 12F);
-            lblStatus.Location = new Point(263, 274);
+            lblStatus.Location = new Point(653, 374);
             lblStatus.Name = "lblStatus";
             lblStatus.Size = new Size(28, 21);
             lblStatus.TabIndex = 5;
@@ -102,7 +108,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(920, 612);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            ClientSize = new Size(1180, 637);
             Controls.Add(lblStatus);
             Controls.Add(label3);
             Controls.Add(btnTrack);

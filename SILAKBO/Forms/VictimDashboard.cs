@@ -62,5 +62,10 @@ namespace SILAKBO.Forms
             }
             // If No is selected, do nothing and stay on dashboard
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -36,17 +36,18 @@
             btnLogin = new Button();
             btnRegister = new Button();
             label3 = new Label();
+            label4 = new Label();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Maroon;
-            label1.Location = new Point(256, 329);
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            label1.ForeColor = Color.Black;
+            label1.Location = new Point(630, 278);
             label1.Name = "label1";
-            label1.Size = new Size(106, 25);
+            label1.Size = new Size(91, 21);
             label1.TabIndex = 0;
             label1.Text = "Username:";
             // 
@@ -54,43 +55,43 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.Maroon;
-            label2.Location = new Point(256, 398);
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            label2.ForeColor = Color.Black;
+            label2.Location = new Point(630, 347);
             label2.Name = "label2";
-            label2.Size = new Size(102, 25);
+            label2.Size = new Size(86, 21);
             label2.TabIndex = 1;
             label2.Text = "Password:";
             // 
             // txtUsername
             // 
-            txtUsername.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtUsername.Location = new Point(373, 322);
+            txtUsername.Font = new Font("Segoe UI", 12F);
+            txtUsername.Location = new Point(727, 270);
             txtUsername.Margin = new Padding(3, 2, 3, 2);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(284, 32);
+            txtUsername.Size = new Size(341, 29);
             txtUsername.TabIndex = 2;
             // 
             // txtPassword
             // 
-            txtPassword.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtPassword.Location = new Point(373, 391);
+            txtPassword.Font = new Font("Segoe UI", 12F);
+            txtPassword.Location = new Point(727, 339);
             txtPassword.Margin = new Padding(3, 2, 3, 2);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
-            txtPassword.Size = new Size(284, 32);
+            txtPassword.Size = new Size(341, 29);
             txtPassword.TabIndex = 3;
             // 
             // btnLogin
             // 
-            btnLogin.BackColor = Color.Green;
+            btnLogin.BackColor = Color.SeaGreen;
             btnLogin.BackgroundImageLayout = ImageLayout.Center;
-            btnLogin.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold);
+            btnLogin.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnLogin.ForeColor = Color.White;
-            btnLogin.Location = new Point(465, 490);
+            btnLogin.Location = new Point(630, 401);
             btnLogin.Margin = new Padding(3, 2, 3, 2);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(192, 52);
+            btnLogin.Size = new Size(438, 46);
             btnLogin.TabIndex = 4;
             btnLogin.Text = "LOGIN";
             btnLogin.UseVisualStyleBackColor = false;
@@ -98,14 +99,14 @@
             // 
             // btnRegister
             // 
-            btnRegister.BackColor = Color.FromArgb(255, 128, 0);
+            btnRegister.BackColor = Color.LightSalmon;
             btnRegister.BackgroundImageLayout = ImageLayout.Center;
-            btnRegister.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold);
+            btnRegister.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnRegister.ForeColor = Color.White;
-            btnRegister.Location = new Point(256, 490);
+            btnRegister.Location = new Point(630, 522);
             btnRegister.Margin = new Padding(3, 2, 3, 2);
             btnRegister.Name = "btnRegister";
-            btnRegister.Size = new Size(192, 52);
+            btnRegister.Size = new Size(438, 46);
             btnRegister.TabIndex = 5;
             btnRegister.Text = "REGISTER";
             btnRegister.UseVisualStyleBackColor = false;
@@ -116,12 +117,22 @@
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Monotype Corsiva", 94.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.Maroon;
-            label3.Location = new Point(161, 88);
+            label3.ForeColor = Color.Indigo;
+            label3.Location = new Point(546, 62);
             label3.Name = "label3";
             label3.Size = new Size(567, 155);
             label3.TabIndex = 6;
             label3.Text = "SILAKBO";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(630, 480);
+            label4.Name = "label4";
+            label4.Size = new Size(187, 21);
+            label4.TabIndex = 7;
+            label4.Text = "Don't have an account?";
             // 
             // LoginForm
             // 
@@ -130,7 +141,8 @@
             BackColor = Color.White;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(924, 616);
+            ClientSize = new Size(1184, 641);
+            Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(btnRegister);
             Controls.Add(btnLogin);
@@ -157,5 +169,6 @@
         private Button btnLogin;
         private Button btnRegister;
         private Label label3;
+        private Label label4;
     }
 }

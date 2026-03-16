@@ -44,7 +44,7 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(198, 85);
+            label1.Location = new Point(334, 99);
             label1.Name = "label1";
             label1.Size = new Size(491, 50);
             label1.TabIndex = 0;
@@ -55,7 +55,7 @@
             cmbIncident.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbIncident.FormattingEnabled = true;
             cmbIncident.Items.AddRange(new object[] { "Verbal Harassment", "Physical Harassment", "Online Harassment", "Stalking", "Other" });
-            cmbIncident.Location = new Point(209, 159);
+            cmbIncident.Location = new Point(345, 173);
             cmbIncident.Name = "cmbIncident";
             cmbIncident.Size = new Size(468, 29);
             cmbIncident.TabIndex = 1;
@@ -65,7 +65,7 @@
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            label2.Location = new Point(209, 215);
+            label2.Location = new Point(345, 229);
             label2.Name = "label2";
             label2.Size = new Size(98, 21);
             label2.TabIndex = 2;
@@ -73,7 +73,7 @@
             // 
             // txtDescription
             // 
-            txtDescription.Location = new Point(209, 245);
+            txtDescription.Location = new Point(345, 259);
             txtDescription.Multiline = true;
             txtDescription.Name = "txtDescription";
             txtDescription.Size = new Size(468, 121);
@@ -84,7 +84,7 @@
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            label3.Location = new Point(209, 399);
+            label3.Location = new Point(345, 413);
             label3.Name = "label3";
             label3.Size = new Size(162, 21);
             label3.TabIndex = 4;
@@ -94,7 +94,7 @@
             // btnBrowse
             // 
             btnBrowse.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBrowse.Location = new Point(559, 430);
+            btnBrowse.Location = new Point(695, 444);
             btnBrowse.Name = "btnBrowse";
             btnBrowse.Size = new Size(118, 29);
             btnBrowse.TabIndex = 6;
@@ -105,7 +105,7 @@
             // btnSubmit
             // 
             btnSubmit.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSubmit.Location = new Point(209, 476);
+            btnSubmit.Location = new Point(345, 490);
             btnSubmit.Name = "btnSubmit";
             btnSubmit.Size = new Size(468, 51);
             btnSubmit.TabIndex = 7;
@@ -116,7 +116,7 @@
             // txtEvidence
             // 
             txtEvidence.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtEvidence.Location = new Point(209, 430);
+            txtEvidence.Location = new Point(345, 444);
             txtEvidence.Name = "txtEvidence";
             txtEvidence.Size = new Size(344, 29);
             txtEvidence.TabIndex = 8;
@@ -128,7 +128,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(924, 616);
+            ClientSize = new Size(1184, 641);
             Controls.Add(txtEvidence);
             Controls.Add(btnSubmit);
             Controls.Add(btnBrowse);
