@@ -59,6 +59,7 @@
             btnRefresh.TabIndex = 2;
             btnRefresh.Text = "Refresh";
             btnRefresh.UseVisualStyleBackColor = true;
+            btnRefresh.Click += btnRefresh_Click;
             // 
             // ResourcesForm
             // 
@@ -70,6 +71,7 @@
             Controls.Add(label1);
             Name = "ResourcesForm";
             Text = "ResourcesForm";
+            Load += ResourcesForm_Load;
             ((System.ComponentModel.ISupportInitialize)dgvResources).EndInit();
             ResumeLayout(false);
             PerformLayout();
