@@ -36,11 +36,12 @@
             label2 = new Label();
             txtPassword = new TextBox();
             label3 = new Label();
-            label4 = new Label();
             label5 = new Label();
             btnLogin = new Button();
             label6 = new Label();
             dtpBirthday = new DateTimePicker();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -120,18 +121,6 @@
             label3.TabIndex = 6;
             label3.Text = "Gender:";
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.Transparent;
-            label4.Font = new Font("Monotype Corsiva", 93.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.Indigo;
-            label4.Location = new Point(576, 47);
-            label4.Name = "label4";
-            label4.Size = new Size(559, 152);
-            label4.TabIndex = 7;
-            label4.Text = "SILAKBO";
-            // 
             // label5
             // 
             label5.AutoSize = true;
@@ -176,6 +165,16 @@
             dtpBirthday.Size = new Size(314, 23);
             dtpBirthday.TabIndex = 11;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(631, 44);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(449, 152);
+            pictureBox1.TabIndex = 12;
+            pictureBox1.TabStop = false;
+            // 
             // RegisterForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -183,11 +182,11 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1184, 641);
+            Controls.Add(pictureBox1);
             Controls.Add(dtpBirthday);
             Controls.Add(label6);
             Controls.Add(btnLogin);
             Controls.Add(label5);
-            Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(txtPassword);
             Controls.Add(label2);
@@ -198,6 +197,8 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "RegisterForm";
             Text = "RegisterForm";
+            Load += RegisterForm_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -211,10 +212,10 @@
         private Label label2;
         private TextBox txtPassword;
         private Label label3;
-        private Label label4;
         private Label label5;
         private Button btnLogin;
         private Label label6;
         private DateTimePicker dtpBirthday;
+        private PictureBox pictureBox1;
     }
 }

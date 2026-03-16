@@ -87,5 +87,10 @@ namespace SILAKBO.Forms
             login.Show();
             this.Close(); // Close the register form to free up memory
         }
+
+        private void RegisterForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

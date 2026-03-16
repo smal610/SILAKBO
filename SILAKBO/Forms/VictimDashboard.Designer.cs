@@ -34,6 +34,8 @@
             btnTrack = new Button();
             btnLogout = new Button();
             btnProfile = new Button();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // btnReport
@@ -95,6 +97,16 @@
             btnProfile.UseVisualStyleBackColor = false;
             btnProfile.Click += button1_Click;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(47, 46);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(201, 50);
+            pictureBox1.TabIndex = 6;
+            pictureBox1.TabStop = false;
+            // 
             // VictimDashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -102,14 +114,17 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1184, 641);
+            Controls.Add(pictureBox1);
             Controls.Add(btnProfile);
             Controls.Add(btnLogout);
             Controls.Add(btnTrack);
             Controls.Add(btnResources);
             Controls.Add(btnReport);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "VictimDashboard";
             Text = "VictimDashboard";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -119,5 +134,6 @@
         private Button btnTrack;
         private Button btnLogout;
         private Button btnProfile;
+        private PictureBox pictureBox1;
     }
 }

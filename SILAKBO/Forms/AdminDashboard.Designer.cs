@@ -18,51 +18,53 @@
 
         private void InitializeComponent()
         {
-            this.btnManageUsers = new System.Windows.Forms.Button();
-            this.btnViewReports = new System.Windows.Forms.Button();
-            this.btnLogout = new System.Windows.Forms.Button();
-            this.SuspendLayout();
-
+            btnManageUsers = new Button();
+            btnViewReports = new Button();
+            btnLogout = new Button();
+            SuspendLayout();
             // 
             // btnManageUsers
             // 
-            this.btnManageUsers.Location = new System.Drawing.Point(50, 30);
-            this.btnManageUsers.Name = "btnManageUsers";
-            this.btnManageUsers.Size = new System.Drawing.Size(150, 40);
-            this.btnManageUsers.Text = "Manage Users";
-            this.btnManageUsers.UseVisualStyleBackColor = true;
-            this.btnManageUsers.Click += new System.EventHandler(this.btnManageUsers_Click);
-
+            btnManageUsers.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
+            btnManageUsers.Location = new Point(358, 70);
+            btnManageUsers.Name = "btnManageUsers";
+            btnManageUsers.Size = new Size(426, 145);
+            btnManageUsers.TabIndex = 0;
+            btnManageUsers.Text = "Manage Users";
+            btnManageUsers.UseVisualStyleBackColor = true;
+            btnManageUsers.Click += btnManageUsers_Click;
             // 
             // btnViewReports
             // 
-            this.btnViewReports.Location = new System.Drawing.Point(50, 90);
-            this.btnViewReports.Name = "btnViewReports";
-            this.btnViewReports.Size = new System.Drawing.Size(150, 40);
-            this.btnViewReports.Text = "View Reports";
-            this.btnViewReports.UseVisualStyleBackColor = true;
-            this.btnViewReports.Click += new System.EventHandler(this.btnViewReports_Click);
-
+            btnViewReports.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
+            btnViewReports.Location = new Point(358, 247);
+            btnViewReports.Name = "btnViewReports";
+            btnViewReports.Size = new Size(426, 145);
+            btnViewReports.TabIndex = 1;
+            btnViewReports.Text = "View Reports";
+            btnViewReports.UseVisualStyleBackColor = true;
+            btnViewReports.Click += btnViewReports_Click;
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(50, 150);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(150, 40);
-            this.btnLogout.Text = "Logout";
-            this.btnLogout.UseVisualStyleBackColor = true;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-
+            btnLogout.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
+            btnLogout.Location = new Point(358, 422);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(426, 145);
+            btnLogout.TabIndex = 2;
+            btnLogout.Text = "Logout";
+            btnLogout.UseVisualStyleBackColor = true;
+            btnLogout.Click += btnLogout_Click;
             // 
             // AdminDashboard
             // 
-            this.ClientSize = new System.Drawing.Size(250, 230);
-            this.Controls.Add(this.btnManageUsers);
-            this.Controls.Add(this.btnViewReports);
-            this.Controls.Add(this.btnLogout);
-            this.Name = "AdminDashboard";
-            this.Text = "Admin Dashboard";
-            this.ResumeLayout(false);
+            ClientSize = new Size(1184, 641);
+            Controls.Add(btnManageUsers);
+            Controls.Add(btnViewReports);
+            Controls.Add(btnLogout);
+            Name = "AdminDashboard";
+            Text = "Admin Dashboard";
+            ResumeLayout(false);
         }
     }
 }

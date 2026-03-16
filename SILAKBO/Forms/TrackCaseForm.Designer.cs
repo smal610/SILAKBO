@@ -35,6 +35,8 @@
             btnTrack = new Button();
             label3 = new Label();
             lblStatus = new Label();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -42,7 +44,7 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(576, 94);
+            label1.Location = new Point(575, 124);
             label1.Name = "label1";
             label1.Size = new Size(232, 40);
             label1.TabIndex = 0;
@@ -104,22 +106,37 @@
             lblStatus.TabIndex = 5;
             lblStatus.Text = "---";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(906, 49);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(201, 50);
+            pictureBox1.TabIndex = 7;
+            pictureBox1.TabStop = false;
+            // 
             // TrackCaseForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1180, 637);
+            Controls.Add(pictureBox1);
             Controls.Add(lblStatus);
             Controls.Add(label3);
             Controls.Add(btnTrack);
             Controls.Add(txtReference);
             Controls.Add(label2);
             Controls.Add(label1);
-            FormBorderStyle = FormBorderStyle.Fixed3D;
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "TrackCaseForm";
             Text = "TrackCaseForm";
             Load += TrackCaseForm_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -132,5 +149,6 @@
         private Button btnTrack;
         private Label label3;
         private Label lblStatus;
+        private PictureBox pictureBox1;
     }
 }

@@ -37,6 +37,8 @@
             btnBrowse = new Button();
             btnSubmit = new Button();
             txtEvidence = new TextBox();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -123,6 +125,16 @@
             txtEvidence.Click += txtEvidence_Click;
             txtEvidence.TextChanged += txtEvidence_TextChanged;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(45, 43);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(201, 50);
+            pictureBox1.TabIndex = 9;
+            pictureBox1.TabStop = false;
+            // 
             // ReportForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -130,6 +142,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1184, 641);
+            Controls.Add(pictureBox1);
             Controls.Add(txtEvidence);
             Controls.Add(btnSubmit);
             Controls.Add(btnBrowse);
@@ -139,8 +152,10 @@
             Controls.Add(cmbIncident);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "ReportForm";
             Text = "ReportForm";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -155,5 +170,6 @@
         private Button btnBrowse;
         private Button btnSubmit;
         private TextBox txtEvidence;
+        private PictureBox pictureBox1;
     }
 }
