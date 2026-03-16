@@ -38,35 +38,38 @@
             // 
             // btnReport
             // 
+            btnReport.BackColor = Color.LightSkyBlue;
             btnReport.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
             btnReport.Location = new Point(594, 197);
             btnReport.Name = "btnReport";
             btnReport.Size = new Size(353, 116);
             btnReport.TabIndex = 1;
             btnReport.Text = "Submit Report";
-            btnReport.UseVisualStyleBackColor = true;
+            btnReport.UseVisualStyleBackColor = false;
             btnReport.Click += btnReport_Click;
             // 
             // btnResources
             // 
+            btnResources.BackColor = Color.MistyRose;
             btnResources.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
             btnResources.Location = new Point(594, 344);
             btnResources.Name = "btnResources";
             btnResources.Size = new Size(353, 116);
             btnResources.TabIndex = 2;
             btnResources.Text = "View Support Resources";
-            btnResources.UseVisualStyleBackColor = true;
+            btnResources.UseVisualStyleBackColor = false;
             btnResources.Click += btnResources_Click;
             // 
             // btnTrack
             // 
+            btnTrack.BackColor = Color.DarkSeaGreen;
             btnTrack.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
             btnTrack.Location = new Point(191, 344);
             btnTrack.Name = "btnTrack";
             btnTrack.Size = new Size(353, 116);
             btnTrack.TabIndex = 3;
             btnTrack.Text = "Track Case";
-            btnTrack.UseVisualStyleBackColor = true;
+            btnTrack.UseVisualStyleBackColor = false;
             btnTrack.Click += btnTrack_Click;
             // 
             // btnLogout
@@ -82,13 +85,14 @@
             // 
             // btnProfile
             // 
+            btnProfile.BackColor = SystemColors.Info;
             btnProfile.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnProfile.Location = new Point(191, 197);
             btnProfile.Name = "btnProfile";
             btnProfile.Size = new Size(353, 116);
             btnProfile.TabIndex = 5;
             btnProfile.Text = "My Profile";
-            btnProfile.UseVisualStyleBackColor = true;
+            btnProfile.UseVisualStyleBackColor = false;
             btnProfile.Click += button1_Click;
             // 
             // VictimDashboard
