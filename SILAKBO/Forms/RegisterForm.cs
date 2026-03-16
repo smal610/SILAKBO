@@ -48,6 +48,15 @@ namespace SILAKBO.Forms
                 return;
             }
 
+            if (string.IsNullOrWhiteSpace(txtUsername.Text) ||
+                string.IsNullOrWhiteSpace(txtPassword.Text) ||
+                cmbGender.SelectedIndex == -1 ||
+                dtpBirthday.Value == null)
+            {
+                MessageBox.Show("Please fill up all the fields.", "Registration Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             UserService service = new UserService();
 
             bool success = service.Register(

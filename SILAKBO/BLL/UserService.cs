@@ -12,16 +12,45 @@ namespace SILAKBO.BLL
         UserRepository repo = new UserRepository();
 
         // REGISTER USER
-        public void Register(string username, string password)
+        //public bool Register(string username, string password)
+        //{
+        //    if (repo.UsernameExists(username))
+        //    {
+        //        return false;
+        //    }
+
+        //    User user = new User();
+
+        //    user.Username = username;
+        //    user.PasswordHash = PasswordHasher.Hash(password);
+        //    user.Role = "Victim";
+        //    user.Gender = "Female";
+
+        //    repo.Register(user);
+
+        //    return true;
+        //}
+
+        // Change (string username, string password) to include gender
+        public bool Register(string username, string password, string gender)
         {
+            if (repo.UsernameExists(username))
+            {
+                return false;
+            }
+
             User user = new User();
 
             user.Username = username;
             user.PasswordHash = PasswordHasher.Hash(password);
             user.Role = "Victim";
-            user.Gender = "Female";
+
+            // Use the variable passed from the form instead of hardcoded "Female"
+            user.Gender = gender;
 
             repo.Register(user);
+
+            return true;
         }
 
         // LOGIN USER

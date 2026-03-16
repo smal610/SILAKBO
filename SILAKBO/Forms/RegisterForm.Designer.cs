@@ -40,7 +40,7 @@
             label5 = new Label();
             btnLogin = new Button();
             label6 = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            dtpBirthday = new DateTimePicker();
             SuspendLayout();
             // 
             // label1
@@ -168,13 +168,13 @@
             label6.TabIndex = 10;
             label6.Text = "Birthday:";
             // 
-            // dateTimePicker1
+            // dtpBirthday
             // 
-            dateTimePicker1.CalendarFont = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dateTimePicker1.Location = new Point(760, 380);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(314, 23);
-            dateTimePicker1.TabIndex = 11;
+            dtpBirthday.CalendarFont = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dtpBirthday.Location = new Point(760, 380);
+            dtpBirthday.Name = "dtpBirthday";
+            dtpBirthday.Size = new Size(314, 23);
+            dtpBirthday.TabIndex = 11;
             // 
             // RegisterForm
             // 
@@ -183,7 +183,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1184, 641);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(dtpBirthday);
             Controls.Add(label6);
             Controls.Add(btnLogin);
             Controls.Add(label5);
@@ -215,6 +215,6 @@
         private Label label5;
         private Button btnLogin;
         private Label label6;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dtpBirthday;
     }
 }
