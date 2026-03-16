@@ -116,11 +116,11 @@
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Monotype Corsiva", 94.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Monotype Corsiva", 93.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Indigo;
-            label3.Location = new Point(546, 62);
+            label3.Location = new Point(563, 61);
             label3.Name = "label3";
-            label3.Size = new Size(567, 155);
+            label3.Size = new Size(559, 152);
             label3.TabIndex = 6;
             label3.Text = "SILAKBO";
             // 

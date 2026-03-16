@@ -22,7 +22,7 @@ namespace SILAKBO.Forms
 
             if (open.ShowDialog() == DialogResult.OK)
             {
-                label3.Text = open.FileName;
+                txtEvidence.Text = open.FileName;
             }
         }
 
@@ -55,6 +55,11 @@ namespace SILAKBO.Forms
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEvidence_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -121,6 +121,7 @@
             txtEvidence.Size = new Size(344, 29);
             txtEvidence.TabIndex = 8;
             txtEvidence.Click += txtEvidence_Click;
+            txtEvidence.TextChanged += txtEvidence_TextChanged;
             // 
             // ReportForm
             // 
