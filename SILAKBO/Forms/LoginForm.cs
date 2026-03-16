@@ -60,17 +60,14 @@ namespace SILAKBO
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            User user = new User();
+            // 1. Initialize the Register Form
+            RegisterForm regForm = new RegisterForm();
 
-            user.Username = txtUsername.Text;
-            user.PasswordHash = PasswordHasher.Hash(txtPassword.Text);
-            user.Role = "Victim";
-            //user.Gender = cmbGender.Text;
+            // 2. Show the Register Form
+            regForm.Show();
 
-            UserRepository repo = new UserRepository();
-            repo.Register(user);
-
-            MessageBox.Show("Account Registered Successfully!");
+            // 3. Hide the current Login Form
+            this.Hide();
         }
     }
 }

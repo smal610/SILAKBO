@@ -38,7 +38,7 @@
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
-            button1 = new Button();
+            btnLogin = new Button();
             SuspendLayout();
             // 
             // label1
@@ -141,17 +141,19 @@
             label5.TabIndex = 8;
             label5.Text = "Already have an account?";
             // 
-            // button1
+            // btnLogin
             // 
-            button1.BackColor = Color.LightSalmon;
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(643, 523);
-            button1.Name = "button1";
-            button1.Size = new Size(431, 49);
-            button1.TabIndex = 9;
-            button1.Text = "Login";
-            button1.UseVisualStyleBackColor = false;
+            btnLogin.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnLogin.BackColor = Color.LightSalmon;
+            btnLogin.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLogin.ForeColor = Color.White;
+            btnLogin.Location = new Point(643, 523);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new Size(431, 49);
+            btnLogin.TabIndex = 9;
+            btnLogin.Text = "Login";
+            btnLogin.UseVisualStyleBackColor = false;
+            btnLogin.Click += btnLogin_Click;
             // 
             // RegisterForm
             // 
@@ -160,7 +162,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1184, 641);
-            Controls.Add(button1);
+            Controls.Add(btnLogin);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -188,6 +190,6 @@
         private Label label3;
         private Label label4;
         private Label label5;
-        private Button button1;
+        private Button btnLogin;
     }
 }
