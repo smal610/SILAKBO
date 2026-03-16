@@ -56,8 +56,9 @@ namespace SILAKBO.Forms
             {
                 MessageBox.Show("Account created successfully!");
 
-                txtUsername.Clear();
-                txtPassword.Clear();
+                LoginForm login = new LoginForm();
+                login.Show();
+                this.Close();
             }
             else
             {
