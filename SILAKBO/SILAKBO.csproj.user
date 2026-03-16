@@ -28,7 +28,7 @@
     <Compile Update="Forms\VictimDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\ViewSupportResourcesForm.cs">
+    <Compile Update="ViewSupportResourcesForm.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

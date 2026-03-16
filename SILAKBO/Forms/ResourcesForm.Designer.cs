@@ -46,16 +46,17 @@
             // 
             // dgvResources
             // 
+            dgvResources.BackgroundColor = SystemColors.ButtonHighlight;
             dgvResources.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvResources.Location = new Point(39, 153);
             dgvResources.Name = "dgvResources";
-            dgvResources.Size = new Size(845, 150);
+            dgvResources.Size = new Size(839, 150);
             dgvResources.TabIndex = 1;
             // 
             // btnRefresh
             // 
             btnRefresh.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnRefresh.Location = new Point(804, 101);
+            btnRefresh.Location = new Point(798, 102);
             btnRefresh.Name = "btnRefresh";
             btnRefresh.Size = new Size(80, 34);
             btnRefresh.TabIndex = 2;
