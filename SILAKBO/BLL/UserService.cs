@@ -12,8 +12,13 @@ namespace SILAKBO.BLL
         UserRepository repo = new UserRepository();
 
         // REGISTER USER
-        public void Register(string username, string password)
+        public bool Register(string username, string password)
         {
+            if (repo.UsernameExists(username))
+            {
+                return false;
+            }
+
             User user = new User();
 
             user.Username = username;
@@ -22,6 +27,8 @@ namespace SILAKBO.BLL
             user.Gender = "Female";
 
             repo.Register(user);
+
+            return true;
         }
 
         // LOGIN USER

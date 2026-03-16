@@ -30,20 +30,20 @@ namespace SILAKBO.Forms
                 return;
             }
 
-            try
+            UserService service = new UserService();
+
+            bool success = service.Register(txtUsername.Text, txtPassword.Text);
+
+            if (success)
             {
-                UserService service = new UserService();
-
-                service.Register(txtUsername.Text, txtPassword.Text);
-
                 MessageBox.Show("Account created successfully!");
 
                 txtUsername.Clear();
                 txtPassword.Clear();
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Username already exists. Please choose another.");
             }
         }
 

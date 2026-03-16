@@ -28,6 +28,24 @@ namespace SILAKBO.DAL
             conn.Close();
         }
 
+        public bool UsernameExists(string username)
+        {
+            var conn = Database.GetConnection();
+            conn.Open();
+
+            string query = "SELECT COUNT(*) FROM Users WHERE Username=@Username";
+
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@Username", username);
+
+            int count = Convert.ToInt32(cmd.ExecuteScalar());
+
+            conn.Close();
+
+            return count > 0;
+        }
+
+
         // NEW METHOD FOR LOGIN
         public User GetUserByUsername(string username)
         {
