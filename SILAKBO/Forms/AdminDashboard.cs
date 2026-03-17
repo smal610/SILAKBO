@@ -47,5 +47,10 @@ namespace SILAKBO
                 this.Close();
             }
         }
+
+        private void AdminDashboard_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

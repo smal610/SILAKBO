@@ -49,7 +49,7 @@
             lblUsername.AutoSize = true;
             lblUsername.BackColor = Color.Transparent;
             lblUsername.Font = new Font("Century Schoolbook", 12F);
-            lblUsername.Location = new Point(894, 291);
+            lblUsername.Location = new Point(885, 304);
             lblUsername.Name = "lblUsername";
             lblUsername.Size = new Size(85, 20);
             lblUsername.TabIndex = 0;
@@ -60,7 +60,7 @@
             lblGender.AutoSize = true;
             lblGender.BackColor = Color.Transparent;
             lblGender.Font = new Font("Century Schoolbook", 12F);
-            lblGender.Location = new Point(894, 328);
+            lblGender.Location = new Point(885, 341);
             lblGender.Name = "lblGender";
             lblGender.Size = new Size(63, 20);
             lblGender.TabIndex = 1;
@@ -71,7 +71,7 @@
             lblBirthday.AutoSize = true;
             lblBirthday.BackColor = Color.Transparent;
             lblBirthday.Font = new Font("Century Schoolbook", 12F);
-            lblBirthday.Location = new Point(894, 363);
+            lblBirthday.Location = new Point(885, 376);
             lblBirthday.Name = "lblBirthday";
             lblBirthday.Size = new Size(76, 20);
             lblBirthday.TabIndex = 2;
@@ -82,7 +82,7 @@
             lblRole.AutoSize = true;
             lblRole.BackColor = Color.Transparent;
             lblRole.Font = new Font("Century Schoolbook", 12F);
-            lblRole.Location = new Point(894, 406);
+            lblRole.Location = new Point(885, 419);
             lblRole.Name = "lblRole";
             lblRole.Size = new Size(42, 20);
             lblRole.TabIndex = 3;
@@ -104,7 +104,7 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Century Schoolbook", 12F, FontStyle.Bold);
-            label1.Location = new Point(761, 293);
+            label1.Location = new Point(752, 306);
             label1.Name = "label1";
             label1.Size = new Size(96, 19);
             label1.TabIndex = 5;
@@ -115,7 +115,7 @@
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Century Schoolbook", 12F, FontStyle.Bold);
-            label2.Location = new Point(761, 329);
+            label2.Location = new Point(752, 342);
             label2.Name = "label2";
             label2.Size = new Size(74, 19);
             label2.TabIndex = 6;
@@ -126,7 +126,7 @@
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Century Schoolbook", 12F, FontStyle.Bold);
-            label3.Location = new Point(761, 364);
+            label3.Location = new Point(752, 377);
             label3.Name = "label3";
             label3.Size = new Size(88, 19);
             label3.TabIndex = 7;
@@ -137,7 +137,7 @@
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Century Schoolbook", 12F, FontStyle.Bold);
-            label4.Location = new Point(761, 407);
+            label4.Location = new Point(752, 420);
             label4.Name = "label4";
             label4.Size = new Size(51, 19);
             label4.TabIndex = 8;
@@ -158,7 +158,7 @@
             label5.AutoSize = true;
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Century Schoolbook", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(761, 259);
+            label5.Location = new Point(752, 269);
             label5.Name = "label5";
             label5.Size = new Size(60, 19);
             label5.TabIndex = 10;
@@ -169,7 +169,7 @@
             lblName.AutoSize = true;
             lblName.BackColor = Color.Transparent;
             lblName.Font = new Font("Century Schoolbook", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblName.Location = new Point(894, 258);
+            lblName.Location = new Point(885, 268);
             lblName.Name = "lblName";
             lblName.Size = new Size(53, 20);
             lblName.TabIndex = 11;

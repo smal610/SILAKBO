@@ -19,5 +19,11 @@ namespace SILAKBO.Models
         public string Status { get; set; } = "";
 
         public DateTime CreatedAt { get; set; }
+
+        // for admin side
+        public int ReportID { get; set; }
+        public string Username { get; set; }
+        public DateTime DateSubmitted { get; set; }
+        public string FilePath { get; set; } // optional
     }
 }
