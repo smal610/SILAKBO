@@ -37,6 +37,7 @@
             btnRegister = new Button();
             label4 = new Label();
             pictureBox1 = new PictureBox();
+            chkShowPassword = new CheckBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -44,11 +45,11 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            label1.Font = new Font("Century Schoolbook", 12F, FontStyle.Bold);
             label1.ForeColor = Color.Black;
             label1.Location = new Point(630, 278);
             label1.Name = "label1";
-            label1.Size = new Size(91, 21);
+            label1.Size = new Size(96, 19);
             label1.TabIndex = 0;
             label1.Text = "Username:";
             // 
@@ -56,40 +57,39 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            label2.Font = new Font("Century Schoolbook", 12F, FontStyle.Bold);
             label2.ForeColor = Color.Black;
             label2.Location = new Point(630, 347);
             label2.Name = "label2";
-            label2.Size = new Size(86, 21);
+            label2.Size = new Size(94, 19);
             label2.TabIndex = 1;
             label2.Text = "Password:";
             // 
             // txtUsername
             // 
-            txtUsername.Font = new Font("Segoe UI", 12F);
-            txtUsername.Location = new Point(727, 270);
+            txtUsername.Font = new Font("Century Schoolbook", 12F);
+            txtUsername.Location = new Point(730, 270);
             txtUsername.Margin = new Padding(3, 2, 3, 2);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(341, 29);
+            txtUsername.Size = new Size(338, 27);
             txtUsername.TabIndex = 2;
             // 
             // txtPassword
             // 
-            txtPassword.Font = new Font("Segoe UI", 12F);
-            txtPassword.Location = new Point(727, 339);
+            txtPassword.Font = new Font("Century Schoolbook", 12F);
+            txtPassword.Location = new Point(730, 339);
             txtPassword.Margin = new Padding(3, 2, 3, 2);
             txtPassword.Name = "txtPassword";
-            txtPassword.PasswordChar = '*';
-            txtPassword.Size = new Size(341, 29);
+            txtPassword.Size = new Size(338, 27);
             txtPassword.TabIndex = 3;
             // 
             // btnLogin
             // 
             btnLogin.BackColor = Color.SeaGreen;
             btnLogin.BackgroundImageLayout = ImageLayout.Center;
-            btnLogin.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            btnLogin.Font = new Font("Century Schoolbook", 12F, FontStyle.Bold);
             btnLogin.ForeColor = Color.White;
-            btnLogin.Location = new Point(630, 401);
+            btnLogin.Location = new Point(630, 417);
             btnLogin.Margin = new Padding(3, 2, 3, 2);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(438, 46);
@@ -102,7 +102,7 @@
             // 
             btnRegister.BackColor = Color.LightSalmon;
             btnRegister.BackgroundImageLayout = ImageLayout.Center;
-            btnRegister.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            btnRegister.Font = new Font("Century Schoolbook", 12F, FontStyle.Bold);
             btnRegister.ForeColor = Color.White;
             btnRegister.Location = new Point(630, 522);
             btnRegister.Margin = new Padding(3, 2, 3, 2);
@@ -117,10 +117,10 @@
             // 
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
-            label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(630, 480);
+            label4.Font = new Font("Century Schoolbook", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(630, 497);
             label4.Name = "label4";
-            label4.Size = new Size(187, 21);
+            label4.Size = new Size(179, 20);
             label4.TabIndex = 7;
             label4.Text = "Don't have an account?";
             // 
@@ -134,6 +134,18 @@
             pictureBox1.TabIndex = 8;
             pictureBox1.TabStop = false;
             // 
+            // chkShowPassword
+            // 
+            chkShowPassword.AutoSize = true;
+            chkShowPassword.Font = new Font("Century Schoolbook", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            chkShowPassword.Location = new Point(955, 376);
+            chkShowPassword.Name = "chkShowPassword";
+            chkShowPassword.Size = new Size(113, 20);
+            chkShowPassword.TabIndex = 9;
+            chkShowPassword.Text = "Show Password";
+            chkShowPassword.UseVisualStyleBackColor = true;
+            chkShowPassword.CheckedChanged += chkShowPassword_CheckedChanged;
+            // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -142,6 +154,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1184, 641);
+            Controls.Add(chkShowPassword);
             Controls.Add(pictureBox1);
             Controls.Add(label4);
             Controls.Add(btnRegister);
@@ -172,5 +185,6 @@
         private Button btnRegister;
         private Label label4;
         private PictureBox pictureBox1;
+        private CheckBox chkShowPassword;
     }
 }

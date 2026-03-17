@@ -27,6 +27,8 @@ namespace SILAKBO
             {
                 MessageBox.Show("Connection Failed: " + ex.Message);
             }
+            
+            txtPassword.UseSystemPasswordChar = true;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -75,6 +77,18 @@ namespace SILAKBO
 
             // 3. Hide the current Login Form
             this.Hide();
+        }
+
+        private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkShowPassword.Checked)
+            {
+                txtPassword.UseSystemPasswordChar = false; // show password
+            }
+            else
+            {
+                txtPassword.UseSystemPasswordChar = true; // hide password
+            }
         }
     }
 }
