@@ -41,6 +41,8 @@
             label6 = new Label();
             dtpBirthday = new DateTimePicker();
             pictureBox1 = new PictureBox();
+            label4 = new Label();
+            txtName = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -49,7 +51,7 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            label1.Location = new Point(643, 235);
+            label1.Location = new Point(649, 266);
             label1.Name = "label1";
             label1.Size = new Size(91, 21);
             label1.TabIndex = 0;
@@ -59,7 +61,7 @@
             // txtUsername
             // 
             txtUsername.Font = new Font("Segoe UI", 12F);
-            txtUsername.Location = new Point(760, 227);
+            txtUsername.Location = new Point(766, 258);
             txtUsername.Margin = new Padding(3, 2, 3, 2);
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(314, 29);
@@ -70,7 +72,7 @@
             btnRegister.BackColor = Color.SeaGreen;
             btnRegister.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRegister.ForeColor = Color.White;
-            btnRegister.Location = new Point(643, 426);
+            btnRegister.Location = new Point(649, 457);
             btnRegister.Margin = new Padding(3, 2, 3, 2);
             btnRegister.Name = "btnRegister";
             btnRegister.Size = new Size(431, 49);
@@ -84,7 +86,7 @@
             cmbGender.Font = new Font("Segoe UI", 12F);
             cmbGender.FormattingEnabled = true;
             cmbGender.Items.AddRange(new object[] { "Female" });
-            cmbGender.Location = new Point(760, 327);
+            cmbGender.Location = new Point(766, 358);
             cmbGender.Margin = new Padding(3, 2, 3, 2);
             cmbGender.Name = "cmbGender";
             cmbGender.Size = new Size(314, 29);
@@ -95,7 +97,7 @@
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            label2.Location = new Point(643, 283);
+            label2.Location = new Point(649, 314);
             label2.Name = "label2";
             label2.Size = new Size(86, 21);
             label2.TabIndex = 4;
@@ -104,7 +106,7 @@
             // txtPassword
             // 
             txtPassword.Font = new Font("Segoe UI", 12F);
-            txtPassword.Location = new Point(760, 275);
+            txtPassword.Location = new Point(766, 306);
             txtPassword.Margin = new Padding(3, 2, 3, 2);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(314, 29);
@@ -115,7 +117,7 @@
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            label3.Location = new Point(643, 335);
+            label3.Location = new Point(649, 366);
             label3.Name = "label3";
             label3.Size = new Size(70, 21);
             label3.TabIndex = 6;
@@ -126,7 +128,7 @@
             label5.AutoSize = true;
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(643, 499);
+            label5.Location = new Point(649, 530);
             label5.Name = "label5";
             label5.Size = new Size(186, 21);
             label5.TabIndex = 8;
@@ -138,7 +140,7 @@
             btnLogin.BackColor = Color.LightSalmon;
             btnLogin.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogin.ForeColor = Color.White;
-            btnLogin.Location = new Point(643, 523);
+            btnLogin.Location = new Point(649, 554);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(431, 49);
             btnLogin.TabIndex = 9;
@@ -151,7 +153,7 @@
             label6.AutoSize = true;
             label6.BackColor = Color.Transparent;
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(643, 380);
+            label6.Location = new Point(649, 411);
             label6.Name = "label6";
             label6.Size = new Size(79, 21);
             label6.TabIndex = 10;
@@ -160,7 +162,7 @@
             // dtpBirthday
             // 
             dtpBirthday.CalendarFont = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dtpBirthday.Location = new Point(760, 380);
+            dtpBirthday.Location = new Point(766, 411);
             dtpBirthday.Name = "dtpBirthday";
             dtpBirthday.Size = new Size(314, 23);
             dtpBirthday.TabIndex = 11;
@@ -175,6 +177,22 @@
             pictureBox1.TabIndex = 12;
             pictureBox1.TabStop = false;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(640, 233);
+            label4.Name = "label4";
+            label4.Size = new Size(42, 15);
+            label4.TabIndex = 13;
+            label4.Text = "Name:";
+            // 
+            // txtName
+            // 
+            txtName.Location = new Point(770, 221);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(100, 23);
+            txtName.TabIndex = 14;
+            // 
             // RegisterForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -182,6 +200,8 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1184, 641);
+            Controls.Add(txtName);
+            Controls.Add(label4);
             Controls.Add(pictureBox1);
             Controls.Add(dtpBirthday);
             Controls.Add(label6);
@@ -219,5 +239,7 @@
         private Label label6;
         private DateTimePicker dtpBirthday;
         private PictureBox pictureBox1;
+        private Label label4;
+        private TextBox txtName;
     }
 }

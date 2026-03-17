@@ -30,6 +30,12 @@ namespace SILAKBO.Forms
                 return;
             }
 
+            if (txtName.Text.Trim() == "" || txtUsername.Text.Trim() == "" || txtPassword.Text.Trim() == "" || cmbGender.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please fill out all required fields.");
+                return;
+            }
+
             if (txtUsername.Text.Trim() == "")
             {
                 MessageBox.Show("Please enter a username.");
@@ -60,6 +66,7 @@ namespace SILAKBO.Forms
             UserService service = new UserService();
 
             bool success = service.Register(
+                txtName.Text.Trim(),
                 txtUsername.Text,
                 txtPassword.Text,
                 cmbGender.Text,

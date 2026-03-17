@@ -40,7 +40,7 @@
             // 
             // btnReport
             // 
-            btnReport.BackColor = Color.LightSkyBlue;
+            btnReport.BackColor = Color.White;
             btnReport.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
             btnReport.Location = new Point(594, 197);
             btnReport.Name = "btnReport";
@@ -52,7 +52,7 @@
             // 
             // btnResources
             // 
-            btnResources.BackColor = Color.MistyRose;
+            btnResources.BackColor = Color.White;
             btnResources.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
             btnResources.Location = new Point(594, 344);
             btnResources.Name = "btnResources";
@@ -64,7 +64,7 @@
             // 
             // btnTrack
             // 
-            btnTrack.BackColor = Color.DarkSeaGreen;
+            btnTrack.BackColor = Color.White;
             btnTrack.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
             btnTrack.Location = new Point(191, 344);
             btnTrack.Name = "btnTrack";
@@ -87,7 +87,7 @@
             // 
             // btnProfile
             // 
-            btnProfile.BackColor = SystemColors.Info;
+            btnProfile.BackColor = Color.White;
             btnProfile.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnProfile.Location = new Point(191, 197);
             btnProfile.Name = "btnProfile";

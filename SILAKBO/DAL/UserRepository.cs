@@ -12,12 +12,13 @@ namespace SILAKBO.DAL
             conn.Open();
 
             string query = @"INSERT INTO Users
-                            (Username, PasswordHash, Role, Gender, Birthday)
+                            (Name, Username, PasswordHash, Role, Gender, Birthday)
                             VALUES
-                            (@Username, @PasswordHash, @Role, @Gender, @Birthday)";
+                            (@Name, @Username, @PasswordHash, @Role, @Gender, @Birthday)";
 
             MySqlCommand cmd = new MySqlCommand(query, conn);
 
+            cmd.Parameters.AddWithValue("@Name", user.Name);
             cmd.Parameters.AddWithValue("@Username", user.Username);
             cmd.Parameters.AddWithValue("@PasswordHash", user.PasswordHash);
             cmd.Parameters.AddWithValue("@Role", user.Role);
