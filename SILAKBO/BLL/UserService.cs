@@ -71,5 +71,10 @@ namespace SILAKBO.BLL
 
             return null;
         }
+
+        public User GetUserByUsername(string username)
+        {
+            return repo.GetUserByUsername(username); // call UserRepository
+        }
     }
 }

@@ -95,7 +95,7 @@
             btnProfile.TabIndex = 5;
             btnProfile.Text = "My Profile";
             btnProfile.UseVisualStyleBackColor = false;
-            btnProfile.Click += button1_Click;
+            btnProfile.Click += btnProfile_Click;
             // 
             // pictureBox1
             // 

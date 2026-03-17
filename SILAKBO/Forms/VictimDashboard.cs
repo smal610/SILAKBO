@@ -10,9 +10,13 @@ namespace SILAKBO.Forms
 {
     public partial class VictimDashboard : Form
     {
-        public VictimDashboard()
+
+        private string loggedInUsername; // store username
+
+        public VictimDashboard(string username)
         {
             InitializeComponent();
+            loggedInUsername = username;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -63,9 +67,10 @@ namespace SILAKBO.Forms
             // If No is selected, do nothing and stay on dashboard
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnProfile_Click(object sender, EventArgs e)
         {
-
+            ProfileForm profile = new ProfileForm(loggedInUsername);
+            profile.ShowDialog(); // modal form
         }
     }
 }
