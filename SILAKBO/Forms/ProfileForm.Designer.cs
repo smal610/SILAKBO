@@ -39,6 +39,8 @@
             label3 = new Label();
             label4 = new Label();
             pictureBox1 = new PictureBox();
+            label5 = new Label();
+            lblName = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -47,7 +49,7 @@
             lblUsername.AutoSize = true;
             lblUsername.BackColor = Color.Transparent;
             lblUsername.Font = new Font("Century Schoolbook", 12F);
-            lblUsername.Location = new Point(894, 280);
+            lblUsername.Location = new Point(894, 291);
             lblUsername.Name = "lblUsername";
             lblUsername.Size = new Size(85, 20);
             lblUsername.TabIndex = 0;
@@ -58,7 +60,7 @@
             lblGender.AutoSize = true;
             lblGender.BackColor = Color.Transparent;
             lblGender.Font = new Font("Century Schoolbook", 12F);
-            lblGender.Location = new Point(894, 319);
+            lblGender.Location = new Point(894, 328);
             lblGender.Name = "lblGender";
             lblGender.Size = new Size(63, 20);
             lblGender.TabIndex = 1;
@@ -88,7 +90,7 @@
             // 
             // btnClose
             // 
-            btnClose.Font = new Font("Century Schoolbook", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnClose.Font = new Font("Century Schoolbook", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnClose.Location = new Point(815, 489);
             btnClose.Name = "btnClose";
             btnClose.Size = new Size(95, 36);
@@ -102,7 +104,7 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Century Schoolbook", 12F, FontStyle.Bold);
-            label1.Location = new Point(761, 282);
+            label1.Location = new Point(761, 293);
             label1.Name = "label1";
             label1.Size = new Size(96, 19);
             label1.TabIndex = 5;
@@ -113,7 +115,7 @@
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Century Schoolbook", 12F, FontStyle.Bold);
-            label2.Location = new Point(761, 320);
+            label2.Location = new Point(761, 329);
             label2.Name = "label2";
             label2.Size = new Size(74, 19);
             label2.TabIndex = 6;
@@ -151,6 +153,28 @@
             pictureBox1.TabIndex = 9;
             pictureBox1.TabStop = false;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
+            label5.Font = new Font("Century Schoolbook", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Location = new Point(761, 259);
+            label5.Name = "label5";
+            label5.Size = new Size(60, 19);
+            label5.TabIndex = 10;
+            label5.Text = "Name:";
+            // 
+            // lblName
+            // 
+            lblName.AutoSize = true;
+            lblName.BackColor = Color.Transparent;
+            lblName.Font = new Font("Century Schoolbook", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblName.Location = new Point(894, 258);
+            lblName.Name = "lblName";
+            lblName.Size = new Size(53, 20);
+            lblName.TabIndex = 11;
+            lblName.Text = "Name";
+            // 
             // ProfileForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -159,6 +183,8 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1184, 641);
+            Controls.Add(lblName);
+            Controls.Add(label5);
             Controls.Add(pictureBox1);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -191,5 +217,7 @@
         private Label label3;
         private Label label4;
         private PictureBox pictureBox1;
+        private Label label5;
+        private Label lblName;
     }
 }

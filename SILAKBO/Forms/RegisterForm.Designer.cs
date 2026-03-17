@@ -50,27 +50,27 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            label1.Location = new Point(649, 266);
+            label1.Font = new Font("Century Schoolbook", 12F, FontStyle.Bold);
+            label1.Location = new Point(649, 279);
             label1.Name = "label1";
-            label1.Size = new Size(91, 21);
+            label1.Size = new Size(96, 19);
             label1.TabIndex = 0;
             label1.Text = "Username:";
             label1.Click += label1_Click;
             // 
             // txtUsername
             // 
-            txtUsername.Font = new Font("Segoe UI", 12F);
-            txtUsername.Location = new Point(766, 258);
+            txtUsername.Font = new Font("Century Schoolbook", 12F);
+            txtUsername.Location = new Point(766, 271);
             txtUsername.Margin = new Padding(3, 2, 3, 2);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(314, 29);
+            txtUsername.Size = new Size(314, 27);
             txtUsername.TabIndex = 1;
             // 
             // btnRegister
             // 
             btnRegister.BackColor = Color.SeaGreen;
-            btnRegister.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRegister.Font = new Font("Century Schoolbook", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRegister.ForeColor = Color.White;
             btnRegister.Location = new Point(649, 457);
             btnRegister.Margin = new Padding(3, 2, 3, 2);
@@ -83,43 +83,43 @@
             // 
             // cmbGender
             // 
-            cmbGender.Font = new Font("Segoe UI", 12F);
+            cmbGender.Font = new Font("Century Schoolbook", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbGender.FormattingEnabled = true;
             cmbGender.Items.AddRange(new object[] { "Female" });
-            cmbGender.Location = new Point(766, 358);
+            cmbGender.Location = new Point(766, 366);
             cmbGender.Margin = new Padding(3, 2, 3, 2);
             cmbGender.Name = "cmbGender";
-            cmbGender.Size = new Size(314, 29);
+            cmbGender.Size = new Size(314, 28);
             cmbGender.TabIndex = 3;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            label2.Location = new Point(649, 314);
+            label2.Font = new Font("Century Schoolbook", 12F, FontStyle.Bold);
+            label2.Location = new Point(649, 328);
             label2.Name = "label2";
-            label2.Size = new Size(86, 21);
+            label2.Size = new Size(94, 19);
             label2.TabIndex = 4;
             label2.Text = "Password:";
             // 
             // txtPassword
             // 
-            txtPassword.Font = new Font("Segoe UI", 12F);
-            txtPassword.Location = new Point(766, 306);
+            txtPassword.Font = new Font("Century Schoolbook", 12F);
+            txtPassword.Location = new Point(766, 320);
             txtPassword.Margin = new Padding(3, 2, 3, 2);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(314, 29);
+            txtPassword.Size = new Size(314, 27);
             txtPassword.TabIndex = 5;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            label3.Location = new Point(649, 366);
+            label3.Font = new Font("Century Schoolbook", 12F, FontStyle.Bold);
+            label3.Location = new Point(649, 369);
             label3.Name = "label3";
-            label3.Size = new Size(70, 21);
+            label3.Size = new Size(74, 19);
             label3.TabIndex = 6;
             label3.Text = "Gender:";
             // 
@@ -127,10 +127,10 @@
             // 
             label5.AutoSize = true;
             label5.BackColor = Color.Transparent;
-            label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Font = new Font("Century Schoolbook", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.Location = new Point(649, 530);
             label5.Name = "label5";
-            label5.Size = new Size(186, 21);
+            label5.Size = new Size(199, 20);
             label5.TabIndex = 8;
             label5.Text = "Already have an account?";
             // 
@@ -138,7 +138,7 @@
             // 
             btnLogin.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btnLogin.BackColor = Color.LightSalmon;
-            btnLogin.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLogin.Font = new Font("Century Schoolbook", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogin.ForeColor = Color.White;
             btnLogin.Location = new Point(649, 554);
             btnLogin.Name = "btnLogin";
@@ -152,19 +152,20 @@
             // 
             label6.AutoSize = true;
             label6.BackColor = Color.Transparent;
-            label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Font = new Font("Century Schoolbook", 12F, FontStyle.Bold);
             label6.Location = new Point(649, 411);
             label6.Name = "label6";
-            label6.Size = new Size(79, 21);
+            label6.Size = new Size(88, 19);
             label6.TabIndex = 10;
             label6.Text = "Birthday:";
             // 
             // dtpBirthday
             // 
             dtpBirthday.CalendarFont = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dtpBirthday.Font = new Font("Century Schoolbook", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dtpBirthday.Location = new Point(766, 411);
             dtpBirthday.Name = "dtpBirthday";
-            dtpBirthday.Size = new Size(314, 23);
+            dtpBirthday.Size = new Size(314, 22);
             dtpBirthday.TabIndex = 11;
             // 
             // pictureBox1
@@ -180,17 +181,20 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(640, 233);
+            label4.BackColor = Color.Transparent;
+            label4.Font = new Font("Century Schoolbook", 12F, FontStyle.Bold);
+            label4.Location = new Point(649, 229);
             label4.Name = "label4";
-            label4.Size = new Size(42, 15);
+            label4.Size = new Size(60, 19);
             label4.TabIndex = 13;
             label4.Text = "Name:";
             // 
             // txtName
             // 
-            txtName.Location = new Point(770, 221);
+            txtName.Font = new Font("Century Schoolbook", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtName.Location = new Point(766, 225);
             txtName.Name = "txtName";
-            txtName.Size = new Size(100, 23);
+            txtName.Size = new Size(314, 27);
             txtName.TabIndex = 14;
             // 
             // RegisterForm

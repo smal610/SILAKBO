@@ -71,7 +71,8 @@ namespace SILAKBO.DAL
                     Username = reader["Username"].ToString(),
                     PasswordHash = reader["PasswordHash"].ToString(),
                     Role = reader["Role"].ToString(),
-                    Gender = reader["Gender"].ToString()
+                    Gender = reader["Gender"].ToString(),
+                    Name = reader["Name"].ToString ()
                 };
             }
 

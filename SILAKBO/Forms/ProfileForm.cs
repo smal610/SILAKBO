@@ -31,9 +31,10 @@ namespace SILAKBO.Forms
             User user = _userService.GetUserByUsername(_username);
             if (user != null)
             {
+                lblName.Text = user.Name;
                 lblUsername.Text = user.Username;
                 lblGender.Text = user.Gender;
-                lblBirthday.Text = user.Birthday.ToString("yyyy-MM-dd"); // format date
+                lblBirthday.Text = user.Birthday.ToString("yyyy-MM-dd");
                 lblRole.Text = user.Role;
             }
             else
