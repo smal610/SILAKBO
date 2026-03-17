@@ -19,9 +19,6 @@
     <Compile Update="Forms\ReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\ReportsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Forms\ResourcesForm.cs">
       <SubType>Form</SubType>
     </Compile>

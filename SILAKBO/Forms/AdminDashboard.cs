@@ -25,9 +25,8 @@ namespace SILAKBO
 
         private void btnViewReports_Click(object sender, EventArgs e)
         {
-            // Open a form to view all reports submitted by victims
             ReportsForm reports = new ReportsForm();
-            reports.Show();
+            reports.DisplayReports(); // prints to console or handles the data
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

@@ -1,18 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Text;
-using System.Windows.Forms;
+using SILAKBO.Models;
+using SILAKBO.DAL;
 
 namespace SILAKBO.Forms
 {
-    public partial class ReportsForm : Form
+    public class ReportsForm
     {
+        private AdminService adminService = new AdminService();
+
         public ReportsForm()
         {
-            InitializeComponent();
+            // Constructor can call LoadReports if you want
+        }
+
+        public void DisplayReports()
+        {
+            List<Report> reports = adminService.GetAllReports();
+
+            Console.WriteLine("ReportID | Username | DateSubmitted | Status");
+            Console.WriteLine("--------------------------------------------");
+
+            foreach (var r in reports)
+            {
+                Console.WriteLine($"{r.ReportID} | {r.Username} | {r.DateSubmitted.ToShortDateString()} | {r.Status}");
+            }
         }
     }
 }
