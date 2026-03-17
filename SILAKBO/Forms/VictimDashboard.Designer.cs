@@ -41,8 +41,8 @@
             // btnReport
             // 
             btnReport.BackColor = Color.White;
-            btnReport.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
-            btnReport.Location = new Point(594, 197);
+            btnReport.Font = new Font("Century Schoolbook", 14.25F, FontStyle.Bold);
+            btnReport.Location = new Point(594, 212);
             btnReport.Name = "btnReport";
             btnReport.Size = new Size(353, 116);
             btnReport.TabIndex = 1;
@@ -53,8 +53,8 @@
             // btnResources
             // 
             btnResources.BackColor = Color.White;
-            btnResources.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
-            btnResources.Location = new Point(594, 344);
+            btnResources.Font = new Font("Century Schoolbook", 14.25F, FontStyle.Bold);
+            btnResources.Location = new Point(594, 360);
             btnResources.Name = "btnResources";
             btnResources.Size = new Size(353, 116);
             btnResources.TabIndex = 2;
@@ -65,8 +65,8 @@
             // btnTrack
             // 
             btnTrack.BackColor = Color.White;
-            btnTrack.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
-            btnTrack.Location = new Point(191, 344);
+            btnTrack.Font = new Font("Century Schoolbook", 14.25F, FontStyle.Bold);
+            btnTrack.Location = new Point(191, 360);
             btnTrack.Name = "btnTrack";
             btnTrack.Size = new Size(353, 116);
             btnTrack.TabIndex = 3;
@@ -76,7 +76,7 @@
             // 
             // btnLogout
             // 
-            btnLogout.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLogout.Font = new Font("Century Schoolbook", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogout.Location = new Point(1020, 61);
             btnLogout.Name = "btnLogout";
             btnLogout.Size = new Size(101, 35);
@@ -88,8 +88,8 @@
             // btnProfile
             // 
             btnProfile.BackColor = Color.White;
-            btnProfile.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnProfile.Location = new Point(191, 197);
+            btnProfile.Font = new Font("Century Schoolbook", 14.25F, FontStyle.Bold);
+            btnProfile.Location = new Point(191, 212);
             btnProfile.Name = "btnProfile";
             btnProfile.Size = new Size(353, 116);
             btnProfile.TabIndex = 5;
@@ -123,7 +123,7 @@
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "VictimDashboard";
-            Text = "VictimDashboard";
+            Text = "Dashboard";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }

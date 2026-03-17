@@ -45,36 +45,37 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(334, 99);
+            label1.Font = new Font("Century Schoolbook", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(406, 114);
             label1.Name = "label1";
-            label1.Size = new Size(491, 50);
+            label1.Size = new Size(354, 30);
             label1.TabIndex = 0;
             label1.Text = "Submit Harassment Report";
             // 
             // cmbIncident
             // 
-            cmbIncident.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmbIncident.Font = new Font("Century Schoolbook", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbIncident.FormattingEnabled = true;
             cmbIncident.Items.AddRange(new object[] { "Verbal Harassment", "Physical Harassment", "Online Harassment", "Stalking", "Other" });
             cmbIncident.Location = new Point(345, 173);
             cmbIncident.Name = "cmbIncident";
-            cmbIncident.Size = new Size(468, 29);
+            cmbIncident.Size = new Size(468, 28);
             cmbIncident.TabIndex = 1;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            label2.Font = new Font("Century Schoolbook", 12F, FontStyle.Bold);
             label2.Location = new Point(345, 229);
             label2.Name = "label2";
-            label2.Size = new Size(98, 21);
+            label2.Size = new Size(107, 19);
             label2.TabIndex = 2;
             label2.Text = "Description";
             // 
             // txtDescription
             // 
+            txtDescription.Font = new Font("Century Schoolbook", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtDescription.Location = new Point(345, 259);
             txtDescription.Multiline = true;
             txtDescription.Name = "txtDescription";
@@ -85,17 +86,17 @@
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            label3.Font = new Font("Century Schoolbook", 12F, FontStyle.Bold);
             label3.Location = new Point(345, 413);
             label3.Name = "label3";
-            label3.Size = new Size(162, 21);
+            label3.Size = new Size(177, 19);
             label3.TabIndex = 4;
             label3.Text = "Evidence (Optional)";
             label3.Click += label3_Click;
             // 
             // btnBrowse
             // 
-            btnBrowse.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBrowse.Font = new Font("Century Schoolbook", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBrowse.Location = new Point(695, 444);
             btnBrowse.Name = "btnBrowse";
             btnBrowse.Size = new Size(118, 29);
@@ -106,7 +107,7 @@
             // 
             // btnSubmit
             // 
-            btnSubmit.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSubmit.Font = new Font("Century Schoolbook", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSubmit.Location = new Point(345, 490);
             btnSubmit.Name = "btnSubmit";
             btnSubmit.Size = new Size(468, 51);
@@ -117,10 +118,10 @@
             // 
             // txtEvidence
             // 
-            txtEvidence.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtEvidence.Font = new Font("Century Schoolbook", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtEvidence.Location = new Point(345, 444);
             txtEvidence.Name = "txtEvidence";
-            txtEvidence.Size = new Size(344, 29);
+            txtEvidence.Size = new Size(344, 27);
             txtEvidence.TabIndex = 8;
             txtEvidence.Click += txtEvidence_Click;
             txtEvidence.TextChanged += txtEvidence_TextChanged;

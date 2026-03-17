@@ -43,10 +43,10 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(575, 124);
+            label1.Font = new Font("Century Schoolbook", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(579, 151);
             label1.Name = "label1";
-            label1.Size = new Size(232, 40);
+            label1.Size = new Size(295, 37);
             label1.TabIndex = 0;
             label1.Text = "Track Your Case";
             label1.Click += label1_Click;
@@ -55,28 +55,28 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(575, 196);
+            label2.Font = new Font("Century Schoolbook", 12F, FontStyle.Bold);
+            label2.Location = new Point(579, 223);
             label2.Name = "label2";
-            label2.Size = new Size(196, 21);
+            label2.Size = new Size(219, 19);
             label2.TabIndex = 1;
             label2.Text = "Enter Reference Number:";
             // 
             // txtReference
             // 
-            txtReference.Font = new Font("Segoe UI", 12F);
-            txtReference.Location = new Point(575, 235);
+            txtReference.Font = new Font("Century Schoolbook", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtReference.Location = new Point(579, 262);
             txtReference.Name = "txtReference";
-            txtReference.Size = new Size(532, 29);
+            txtReference.Size = new Size(532, 27);
             txtReference.TabIndex = 2;
             txtReference.TextAlign = HorizontalAlignment.Center;
             // 
             // btnTrack
             // 
             btnTrack.BackColor = Color.Indigo;
-            btnTrack.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnTrack.Font = new Font("Century Schoolbook", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnTrack.ForeColor = Color.White;
-            btnTrack.Location = new Point(574, 294);
+            btnTrack.Location = new Point(578, 321);
             btnTrack.Name = "btnTrack";
             btnTrack.Size = new Size(532, 52);
             btnTrack.TabIndex = 3;
@@ -88,10 +88,10 @@
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(575, 374);
+            label3.Font = new Font("Century Schoolbook", 12F, FontStyle.Bold);
+            label3.Location = new Point(579, 401);
             label3.Name = "label3";
-            label3.Size = new Size(59, 21);
+            label3.Size = new Size(67, 19);
             label3.TabIndex = 4;
             label3.Text = "Status:";
             // 
@@ -99,10 +99,10 @@
             // 
             lblStatus.AutoSize = true;
             lblStatus.BackColor = Color.Transparent;
-            lblStatus.Font = new Font("Segoe UI", 12F);
-            lblStatus.Location = new Point(653, 374);
+            lblStatus.Font = new Font("Century Schoolbook", 12F);
+            lblStatus.Location = new Point(657, 401);
             lblStatus.Name = "lblStatus";
-            lblStatus.Size = new Size(28, 21);
+            lblStatus.Size = new Size(24, 20);
             lblStatus.TabIndex = 5;
             lblStatus.Text = "---";
             // 
@@ -134,7 +134,7 @@
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "TrackCaseForm";
-            Text = "TrackCaseForm";
+            Text = "Track Case";
             Load += TrackCaseForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);

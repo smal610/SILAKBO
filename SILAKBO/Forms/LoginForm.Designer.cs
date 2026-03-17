@@ -85,7 +85,7 @@
             // 
             // btnLogin
             // 
-            btnLogin.BackColor = Color.SeaGreen;
+            btnLogin.BackColor = Color.Indigo;
             btnLogin.BackgroundImageLayout = ImageLayout.Center;
             btnLogin.Font = new Font("Century Schoolbook", 12F, FontStyle.Bold);
             btnLogin.ForeColor = Color.White;
@@ -100,7 +100,7 @@
             // 
             // btnRegister
             // 
-            btnRegister.BackColor = Color.LightSalmon;
+            btnRegister.BackColor = Color.PaleVioletRed;
             btnRegister.BackgroundImageLayout = ImageLayout.Center;
             btnRegister.Font = new Font("Century Schoolbook", 12F, FontStyle.Bold);
             btnRegister.ForeColor = Color.White;
@@ -168,7 +168,7 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "LoginForm";
             Padding = new Padding(10);
-            Text = "Form1";
+            Text = "Login";
             Load += LoginForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);

@@ -69,7 +69,7 @@
             // 
             // btnRegister
             // 
-            btnRegister.BackColor = Color.SeaGreen;
+            btnRegister.BackColor = Color.Indigo;
             btnRegister.Font = new Font("Century Schoolbook", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRegister.ForeColor = Color.White;
             btnRegister.Location = new Point(649, 457);
@@ -137,7 +137,7 @@
             // btnLogin
             // 
             btnLogin.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btnLogin.BackColor = Color.LightSalmon;
+            btnLogin.BackColor = Color.PaleVioletRed;
             btnLogin.Font = new Font("Century Schoolbook", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogin.ForeColor = Color.White;
             btnLogin.Location = new Point(649, 554);
@@ -153,7 +153,7 @@
             label6.AutoSize = true;
             label6.BackColor = Color.Transparent;
             label6.Font = new Font("Century Schoolbook", 12F, FontStyle.Bold);
-            label6.Location = new Point(649, 411);
+            label6.Location = new Point(649, 412);
             label6.Name = "label6";
             label6.Size = new Size(88, 19);
             label6.TabIndex = 10;
@@ -163,7 +163,7 @@
             // 
             dtpBirthday.CalendarFont = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dtpBirthday.Font = new Font("Century Schoolbook", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dtpBirthday.Location = new Point(766, 411);
+            dtpBirthday.Location = new Point(766, 412);
             dtpBirthday.Name = "dtpBirthday";
             dtpBirthday.Size = new Size(314, 22);
             dtpBirthday.TabIndex = 11;
@@ -222,7 +222,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
             Name = "RegisterForm";
-            Text = "RegisterForm";
+            Text = "Register";
             Load += RegisterForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);

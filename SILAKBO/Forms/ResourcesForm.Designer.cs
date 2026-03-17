@@ -41,10 +41,10 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Century Schoolbook", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(39, 120);
             label1.Name = "label1";
-            label1.Size = new Size(197, 30);
+            label1.Size = new Size(220, 25);
             label1.TabIndex = 0;
             label1.Text = "Support Resources";
             // 
@@ -59,7 +59,7 @@
             // 
             // btnRefresh
             // 
-            btnRefresh.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRefresh.Font = new Font("Century Schoolbook", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRefresh.Location = new Point(1048, 120);
             btnRefresh.Name = "btnRefresh";
             btnRefresh.Size = new Size(80, 34);
@@ -93,7 +93,7 @@
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "ResourcesForm";
-            Text = "ResourcesForm";
+            Text = "Resources";
             Load += ResourcesForm_Load;
             ((System.ComponentModel.ISupportInitialize)dgvResources).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
