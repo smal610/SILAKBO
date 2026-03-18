@@ -5,21 +5,58 @@ using System.Collections.Generic;
 using System.Data;
 using System.Text;
 
+//namespace SILAKBO.BLL
+//{
+//    public class ReportService
+//    {
+//        ReportRepository repo = new ReportRepository();
+
+//        public void Submit(int userID, string victimName, string incidentType, string description, string evidence)
+//        {
+//            Report report = new Report();
+
+//            report.UserID = userID;
+//            report.VictimName = victimName;
+//            report.IncidentType = incidentType;
+//            report.Description = description;
+//            report.EvidencePath = evidence;
+//            report.Status = "Received";
+
+//            repo.SubmitReport(report);
+//        }
+
+//        public DataTable GetAllReports()
+//        {
+//            return repo.GetAllReports();
+//        }
+
+//        public void UpdateStatus(int id, string status)
+//        {
+//            repo.UpdateStatus(id, status);
+//        }
+//    }
+//}
+
 namespace SILAKBO.BLL
 {
     public class ReportService
     {
         ReportRepository repo = new ReportRepository();
 
-        public void Submit(int userID, string incidentType, string description, string evidence)
+        public void Submit(int userID, string victimName, string incidentType, string description, string evidence)
         {
-            Report report = new Report();
+            Report report = new Report
+            {
+                UserID = userID,
+                VictimName = victimName,
+                IncidentType = incidentType,
+                Description = description,
+                EvidencePath = evidence,
+                Status = "Received"
+            };
 
-            report.UserID = userID;
-            report.IncidentType = incidentType;
-            report.Description = description;
-            report.EvidencePath = evidence;
-            report.Status = "Received";
+            // Generate case reference here before saving
+            report.CaseReference = repo.GenerateCaseReference();
 
             repo.SubmitReport(report);
         }

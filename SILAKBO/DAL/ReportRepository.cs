@@ -9,45 +9,19 @@ namespace SILAKBO.DAL
 {
     public class ReportRepository
     {
-        //public void SubmitReport(Report report)
-        //{
-        //    var conn = Database.GetConnection();
-        //    conn.Open();
-
-        //    string query = @"INSERT INTO Reports
-        //                    (UserID, IncidentType, Description, EvidencePath, Status)
-        //                    VALUES
-        //                    (@UserID, @IncidentType, @Description, @EvidencePath, @Status)";
-
-        //    MySqlCommand cmd = new MySqlCommand(query, conn);
-
-        //    cmd.Parameters.AddWithValue("@UserID", report.UserID);
-        //    cmd.Parameters.AddWithValue("@IncidentType", report.IncidentType);
-        //    cmd.Parameters.AddWithValue("@Description", report.Description);
-        //    cmd.Parameters.AddWithValue("@EvidencePath", report.EvidencePath);
-        //    cmd.Parameters.AddWithValue("@Status", report.Status);
-
-        //    cmd.ExecuteNonQuery();
-
-        //    conn.Close();
-        //}
-
         public void SubmitReport(Report report)
         {
             var conn = Database.GetConnection();
             conn.Open();
 
-            // Generate Case Reference
-            report.CaseReference = GenerateCaseReference(conn);
-
             string query = @"INSERT INTO Reports
-                    (UserID, IncidentType, Description, EvidencePath, Status, CaseReference)
-                    VALUES
-                    (@UserID, @IncidentType, @Description, @EvidencePath, @Status, @CaseReference)";
+                            (UserID, VictimName, IncidentType, Description, EvidencePath, Status, CaseReference)
+                            VALUES
+                            (@UserID, @VictimName, @IncidentType, @Description, @EvidencePath, @Status, @CaseReference)";
 
             MySqlCommand cmd = new MySqlCommand(query, conn);
-
             cmd.Parameters.AddWithValue("@UserID", report.UserID);
+            cmd.Parameters.AddWithValue("@VictimName", report.VictimName);
             cmd.Parameters.AddWithValue("@IncidentType", report.IncidentType);
             cmd.Parameters.AddWithValue("@Description", report.Description);
             cmd.Parameters.AddWithValue("@EvidencePath", report.EvidencePath);
@@ -55,71 +29,27 @@ namespace SILAKBO.DAL
             cmd.Parameters.AddWithValue("@CaseReference", report.CaseReference);
 
             cmd.ExecuteNonQuery();
-
             conn.Close();
         }
 
-        private string GenerateCaseReference(MySqlConnection conn)
+        public string GenerateCaseReference()
         {
-            string query = "SELECT CaseReference FROM Reports ORDER BY ID DESC LIMIT 1";
+            // Example: SIL-2026-0001
+            var conn = Database.GetConnection();
+            conn.Open();
+
+            string query = "SELECT COUNT(*) FROM Reports";
             MySqlCommand cmd = new MySqlCommand(query, conn);
-            var lastRef = cmd.ExecuteScalar()?.ToString();
+            int count = Convert.ToInt32(cmd.ExecuteScalar()) + 1;
 
-            int nextNumber = 1;
+            conn.Close();
 
-            if (!string.IsNullOrEmpty(lastRef))
-            {
-                // lastRef format: "SIL-2026-0001"
-                string[] parts = lastRef.Split('-');
-                if (parts.Length == 3)
-                {
-                    int.TryParse(parts[2], out nextNumber);
-                    nextNumber += 1;
-                }
-            }
-
-            string year = DateTime.Now.Year.ToString();
-            string newRef = $"SIL-{year}-{nextNumber.ToString("D4")}";
-            return newRef;
+            return $"SIL-2026-{count:0000}";
         }
-
-        // NEW METHOD: Get all reports
-        //public List<Report> GetReports()
-        //{
-        //    List<Report> reports = new List<Report>();
-        //    var conn = Database.GetConnection();
-        //    conn.Open();
-
-        //    string query = @"SELECT ReportID, UserID, IncidentType, Description, EvidencePath, Status, DateSubmitted
-        //                     FROM Reports"; // adjust if your column names are different
-
-        //    MySqlCommand cmd = new MySqlCommand(query, conn);
-        //    MySqlDataReader reader = cmd.ExecuteReader();
-
-        //    while (reader.Read())
-        //    {
-        //        Report report = new Report()
-        //        {
-        //            ReportID = reader.GetInt32("ReportID"),
-        //            UserID = reader.GetInt32("UserID"),
-        //            IncidentType = reader.GetString("IncidentType"),
-        //            Description = reader.GetString("Description"),
-        //            EvidencePath = reader.GetString("EvidencePath"),
-        //            Status = reader.GetString("Status"),
-        //            DateSubmitted = reader.GetDateTime("DateSubmitted")
-        //        };
-
-        //        reports.Add(report);
-        //    }
-
-        //    conn.Close();
-        //    return reports;
-        //}
 
         public DataTable GetAllReports()
         {
             DataTable table = new DataTable();
-
             var conn = Database.GetConnection();
             conn.Open();
 
@@ -132,13 +62,10 @@ namespace SILAKBO.DAL
                     r.Description,
                     r.Status,
                     r.CreatedAt
-                FROM Reports r
-                JOIN Users u ON r.UserID = u.ID
-            ";
+                FROM Reports r";
 
             MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
             adapter.Fill(table);
-
             conn.Close();
 
             return table;
@@ -150,19 +77,34 @@ namespace SILAKBO.DAL
             conn.Open();
 
             string query = "UPDATE Reports SET Status=@Status WHERE ID=@ID";
-
             MySqlCommand cmd = new MySqlCommand(query, conn);
             cmd.Parameters.AddWithValue("@Status", status);
             cmd.Parameters.AddWithValue("@ID", reportId);
 
             cmd.ExecuteNonQuery();
-
             conn.Close();
         }
 
         internal List<Report> GetReports()
         {
-            throw new NotImplementedException();
+            List<Report> reports = new List<Report>();
+
+            DataTable dt = GetAllReports();
+            foreach (DataRow row in dt.Rows)
+            {
+                reports.Add(new Report
+                {
+                    ID = Convert.ToInt32(row["ID"]),
+                    VictimName = row["VictimName"].ToString(),
+                    IncidentType = row["IncidentType"].ToString(),
+                    Description = row["Description"].ToString(),
+                    Status = row["Status"].ToString(),
+                    CaseReference = row["CaseReference"].ToString(),
+                    CreatedAt = Convert.ToDateTime(row["CreatedAt"])
+                });
+            }
+
+            return reports;
         }
     }
 }
