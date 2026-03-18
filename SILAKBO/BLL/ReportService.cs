@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Text;
+namespace SILAKBO.BLL
 
 //namespace SILAKBO.BLL
 //{
@@ -37,12 +38,13 @@ using System.Text;
 //    }
 //}
 
-namespace SILAKBO.BLL
+
 {
     public class ReportService
     {
-        ReportRepository repo = new ReportRepository();
+        private ReportRepository repo = new ReportRepository();
 
+        // Submit a report dynamically
         public void Submit(int userID, string victimName, string incidentType, string description, string evidence)
         {
             Report report = new Report
@@ -52,11 +54,10 @@ namespace SILAKBO.BLL
                 IncidentType = incidentType,
                 Description = description,
                 EvidencePath = evidence,
-                Status = "Received"
+                Status = "Received",
+                CaseReference = repo.GenerateCaseReference(),
+                CreatedAt = DateTime.Now
             };
-
-            // Generate case reference here before saving
-            report.CaseReference = repo.GenerateCaseReference();
 
             repo.SubmitReport(report);
         }
