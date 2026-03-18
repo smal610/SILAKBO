@@ -33,23 +33,26 @@
             cmbStatus = new ComboBox();
             btnUpdate = new Button();
             label1 = new Label();
+            btnLogout = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(30, 70);
+            dataGridView1.Location = new Point(30, 82);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(1106, 488);
+            dataGridView1.Size = new Size(1119, 470);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // btnLoad
             // 
+            btnLoad.Font = new Font("Century Schoolbook", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnLoad.Location = new Point(30, 29);
             btnLoad.Name = "btnLoad";
-            btnLoad.Size = new Size(85, 23);
+            btnLoad.Size = new Size(154, 35);
             btnLoad.TabIndex = 1;
             btnLoad.Text = "Load Reports";
             btnLoad.UseVisualStyleBackColor = true;
@@ -57,18 +60,20 @@
             // 
             // cmbStatus
             // 
+            cmbStatus.Font = new Font("Century Schoolbook", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbStatus.FormattingEnabled = true;
-            cmbStatus.Items.AddRange(new object[] { "Pending", "", "Investigating", "", "Resolved" });
-            cmbStatus.Location = new Point(241, 591);
+            cmbStatus.Items.AddRange(new object[] { "Pending", "Investigating", "Resolved" });
+            cmbStatus.Location = new Point(103, 572);
             cmbStatus.Name = "cmbStatus";
-            cmbStatus.Size = new Size(121, 23);
+            cmbStatus.Size = new Size(202, 28);
             cmbStatus.TabIndex = 2;
             // 
             // btnUpdate
             // 
-            btnUpdate.Location = new Point(673, 592);
+            btnUpdate.Font = new Font("Century Schoolbook", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnUpdate.Location = new Point(328, 572);
             btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(75, 23);
+            btnUpdate.Size = new Size(98, 28);
             btnUpdate.TabIndex = 3;
             btnUpdate.Text = "Update";
             btnUpdate.UseVisualStyleBackColor = true;
@@ -77,17 +82,29 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(174, 599);
+            label1.Font = new Font("Century Schoolbook", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(30, 575);
             label1.Name = "label1";
-            label1.Size = new Size(42, 15);
+            label1.Size = new Size(67, 19);
             label1.TabIndex = 4;
             label1.Text = "Status:";
+            // 
+            // btnLogout
+            // 
+            btnLogout.Location = new Point(991, 37);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(75, 23);
+            btnLogout.TabIndex = 5;
+            btnLogout.Text = "Logout";
+            btnLogout.UseVisualStyleBackColor = true;
+            btnLogout.Click += btnLogout_Click;
             // 
             // AdminReportViewer
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1184, 641);
+            Controls.Add(btnLogout);
             Controls.Add(label1);
             Controls.Add(btnUpdate);
             Controls.Add(cmbStatus);
@@ -108,5 +125,6 @@
         private ComboBox cmbStatus;
         private Button btnUpdate;
         private Label label1;
+        private Button btnLogout;
     }
 }

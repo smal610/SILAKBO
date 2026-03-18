@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SILAKBO")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+17b7c6ba6c472702789f1e7db345406c03640c37")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1f999e54847583334a3d273b11b3b18aa74a9fa9")]
 [assembly: System.Reflection.AssemblyProductAttribute("SILAKBO")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SILAKBO")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

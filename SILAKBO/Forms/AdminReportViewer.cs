@@ -42,5 +42,23 @@ namespace SILAKBO.Forms
 
             btnLoad.PerformClick(); // refresh
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "Are you sure you want to logout?",
+                "Confirm Logout",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (result == DialogResult.Yes)
+            {
+                MessageBox.Show("Logout Successful!", "Logged Out", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoginForm login = new LoginForm();
+                login.Show();
+                this.Close();
+            }
+        }
     }
 }
