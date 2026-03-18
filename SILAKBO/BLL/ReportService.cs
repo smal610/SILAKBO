@@ -1,8 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using SILAKBO.DAL;
 using SILAKBO.Models;
-using SILAKBO.DAL;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Text;
 
 namespace SILAKBO.BLL
 {
@@ -21,6 +22,11 @@ namespace SILAKBO.BLL
             report.Status = "Received";
 
             repo.SubmitReport(report);
+        }
+
+        public DataTable GetAllReports()
+        {
+            return repo.GetAllReports();
         }
     }
 }

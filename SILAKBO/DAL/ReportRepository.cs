@@ -1,8 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 using SILAKBO.Models;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Text;
 
 namespace SILAKBO.DAL
 {
@@ -32,36 +33,63 @@ namespace SILAKBO.DAL
         }
 
         // NEW METHOD: Get all reports
-        public List<Report> GetReports()
+        //public List<Report> GetReports()
+        //{
+        //    List<Report> reports = new List<Report>();
+        //    var conn = Database.GetConnection();
+        //    conn.Open();
+
+        //    string query = @"SELECT ReportID, UserID, IncidentType, Description, EvidencePath, Status, DateSubmitted
+        //                     FROM Reports"; // adjust if your column names are different
+
+        //    MySqlCommand cmd = new MySqlCommand(query, conn);
+        //    MySqlDataReader reader = cmd.ExecuteReader();
+
+        //    while (reader.Read())
+        //    {
+        //        Report report = new Report()
+        //        {
+        //            ReportID = reader.GetInt32("ReportID"),
+        //            UserID = reader.GetInt32("UserID"),
+        //            IncidentType = reader.GetString("IncidentType"),
+        //            Description = reader.GetString("Description"),
+        //            EvidencePath = reader.GetString("EvidencePath"),
+        //            Status = reader.GetString("Status"),
+        //            DateSubmitted = reader.GetDateTime("DateSubmitted")
+        //        };
+
+        //        reports.Add(report);
+        //    }
+
+        //    conn.Close();
+        //    return reports;
+        //}
+
+        public DataTable GetAllReports()
         {
-            List<Report> reports = new List<Report>();
+            DataTable table = new DataTable();
+
             var conn = Database.GetConnection();
             conn.Open();
 
-            string query = @"SELECT ReportID, UserID, IncidentType, Description, EvidencePath, Status, DateSubmitted
-                             FROM Reports"; // adjust if your column names are different
+            string query = @"
+        SELECT 
+            r.ID,
+            u.Username AS VictimName,
+            r.IncidentType,
+            r.Description,
+            r.Status,
+            r.CreatedAt
+        FROM Reports r
+        JOIN Users u ON r.UserID = u.ID
+    ";
 
-            MySqlCommand cmd = new MySqlCommand(query, conn);
-            MySqlDataReader reader = cmd.ExecuteReader();
-
-            while (reader.Read())
-            {
-                Report report = new Report()
-                {
-                    ReportID = reader.GetInt32("ReportID"),
-                    UserID = reader.GetInt32("UserID"),
-                    IncidentType = reader.GetString("IncidentType"),
-                    Description = reader.GetString("Description"),
-                    EvidencePath = reader.GetString("EvidencePath"),
-                    Status = reader.GetString("Status"),
-                    DateSubmitted = reader.GetDateTime("DateSubmitted")
-                };
-
-                reports.Add(report);
-            }
+            MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
+            adapter.Fill(table);
 
             conn.Close();
-            return reports;
+
+            return table;
         }
     }
 }
