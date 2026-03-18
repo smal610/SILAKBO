@@ -28,5 +28,10 @@ namespace SILAKBO.BLL
         {
             return repo.GetAllReports();
         }
+
+        public void UpdateStatus(int id, string status)
+        {
+            repo.UpdateStatus(id, status);
+        }
     }
 }

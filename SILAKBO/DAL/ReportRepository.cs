@@ -91,5 +91,26 @@ namespace SILAKBO.DAL
 
             return table;
         }
+
+        public void UpdateStatus(int reportId, string status)
+        {
+            var conn = Database.GetConnection();
+            conn.Open();
+
+            string query = "UPDATE Reports SET Status=@Status WHERE ID=@ID";
+
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@Status", status);
+            cmd.Parameters.AddWithValue("@ID", reportId);
+
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+        }
+
+        internal List<Report> GetReports()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

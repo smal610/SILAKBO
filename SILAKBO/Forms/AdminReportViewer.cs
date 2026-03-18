@@ -27,5 +27,20 @@ namespace SILAKBO.Forms
 
             dataGridView1.DataSource = service.GetAllReports();
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentRow == null)
+                return;
+
+            int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["ID"].Value);
+
+            ReportService service = new ReportService();
+            service.UpdateStatus(id, cmbStatus.Text);
+
+            MessageBox.Show("Status updated!");
+
+            btnLoad.PerformClick(); // refresh
+        }
     }
 }
