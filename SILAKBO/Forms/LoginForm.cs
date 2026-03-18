@@ -50,7 +50,7 @@ namespace SILAKBO
 
                 if (user.Role == "Admin")
                 {
-                    AdminDashboard admin = new AdminDashboard();
+                    AdminReportViewer admin = new AdminReportViewer();
                     admin.Show();
                 }
                 else
