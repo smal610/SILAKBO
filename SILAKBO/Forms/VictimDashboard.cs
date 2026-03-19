@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SILAKBO.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +13,13 @@ namespace SILAKBO.Forms
     {
 
         private string loggedInUsername; // store username
+        private User currentUser;
 
-        public VictimDashboard(string username)
+        public VictimDashboard(User user)
         {
             InitializeComponent();
-            loggedInUsername = username;
+            currentUser = user;
+            loggedInUsername = user.Username;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -38,8 +41,8 @@ namespace SILAKBO.Forms
 
         private void btnTrack_Click(object sender, EventArgs e)
         {
-            TrackCaseForm track = new TrackCaseForm();
-            track.Show();
+            TrackCaseForm form = new TrackCaseForm(currentUser);
+            form.Show();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

@@ -55,7 +55,7 @@ namespace SILAKBO
                 }
                 else
                 {
-                    VictimDashboard victim = new VictimDashboard(user.Username);
+                    VictimDashboard victim = new VictimDashboard(user);
                     victim.Show();
                 }
 

@@ -4,72 +4,29 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Text;
+
 namespace SILAKBO.BLL
-
-//namespace SILAKBO.BLL
-//{
-//    public class ReportService
-//    {
-//        ReportRepository repo = new ReportRepository();
-
-//        public void Submit(int userID, string victimName, string incidentType, string description, string evidence)
-//        {
-//            Report report = new Report();
-
-//            report.UserID = userID;
-//            report.VictimName = victimName;
-//            report.IncidentType = incidentType;
-//            report.Description = description;
-//            report.EvidencePath = evidence;
-//            report.Status = "Received";
-
-//            repo.SubmitReport(report);
-//        }
-
-//        public DataTable GetAllReports()
-//        {
-//            return repo.GetAllReports();
-//        }
-
-//        public void UpdateStatus(int id, string status)
-//        {
-//            repo.UpdateStatus(id, status);
-//        }
-//    }
-//}
-
-
 {
     public class ReportService
     {
-        private ReportRepository repo = new ReportRepository();
+        ReportRepository repo = new ReportRepository();
 
-        // Submit a report dynamically
-        public void Submit(int userID, string victimName, string incidentType, string description, string evidence)
+        public void Submit(int userID, string incidentType, string description, string evidence)
         {
-            Report report = new Report
-            {
-                UserID = userID,
-                VictimName = victimName,
-                IncidentType = incidentType,
-                Description = description,
-                EvidencePath = evidence,
-                Status = "Received",
-                CaseReference = repo.GenerateCaseReference(),
-                CreatedAt = DateTime.Now
-            };
+            Report report = new Report();
+
+            report.UserID = userID;
+            report.IncidentType = incidentType;
+            report.Description = description;
+            report.EvidencePath = evidence;
+            report.Status = "Received";
 
             repo.SubmitReport(report);
         }
 
-        public DataTable GetAllReports()
+        public DataTable GetReportsByUser(int userID)
         {
-            return repo.GetAllReports();
-        }
-
-        public void UpdateStatus(int id, string status)
-        {
-            repo.UpdateStatus(id, status);
+            return repo.GetReportsByUserID(userID);
         }
 
         //internal object? GetAllReports()
