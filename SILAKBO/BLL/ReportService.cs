@@ -1,36 +1,85 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using SILAKBO.DAL;
 using SILAKBO.Models;
-using SILAKBO.DAL;
-
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Text;
 namespace SILAKBO.BLL
+
+//namespace SILAKBO.BLL
+//{
+//    public class ReportService
+//    {
+//        ReportRepository repo = new ReportRepository();
+
+//        public void Submit(int userID, string victimName, string incidentType, string description, string evidence)
+//        {
+//            Report report = new Report();
+
+//            report.UserID = userID;
+//            report.VictimName = victimName;
+//            report.IncidentType = incidentType;
+//            report.Description = description;
+//            report.EvidencePath = evidence;
+//            report.Status = "Received";
+
+//            repo.SubmitReport(report);
+//        }
+
+//        public DataTable GetAllReports()
+//        {
+//            return repo.GetAllReports();
+//        }
+
+//        public void UpdateStatus(int id, string status)
+//        {
+//            repo.UpdateStatus(id, status);
+//        }
+//    }
+//}
+
+
 {
     public class ReportService
     {
-        ReportRepository repo = new ReportRepository();
+        private ReportRepository repo = new ReportRepository();
 
-        public void Submit(int userID, string incidentType, string description, string evidence)
+        // Submit a report dynamically
+        public void Submit(int userID, string victimName, string incidentType, string description, string evidence)
         {
-            Report report = new Report();
-
-            report.UserID = userID;
-            report.IncidentType = incidentType;
-            report.Description = description;
-            report.EvidencePath = evidence;
-            report.Status = "Received";
+            Report report = new Report
+            {
+                UserID = userID,
+                VictimName = victimName,
+                IncidentType = incidentType,
+                Description = description,
+                EvidencePath = evidence,
+                Status = "Received",
+                CaseReference = repo.GenerateCaseReference(),
+                CreatedAt = DateTime.Now
+            };
 
             repo.SubmitReport(report);
         }
 
-        internal object? GetAllReports()
+        public DataTable GetAllReports()
         {
-            throw new NotImplementedException();
+            return repo.GetAllReports();
         }
 
-        internal void UpdateStatus(int id, string text)
+        public void UpdateStatus(int id, string status)
         {
-            throw new NotImplementedException();
+            repo.UpdateStatus(id, status);
         }
+
+        //internal object? GetAllReports()
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        //internal void UpdateStatus(int id, string text)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

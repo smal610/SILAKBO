@@ -79,5 +79,43 @@ namespace SILAKBO.DAL
             conn.Close();
             return user;
         }
+
+        public static int GetUserIDByUsername(string username)
+        {
+            int userID = 0;
+            var conn = Database.GetConnection();
+            conn.Open();
+
+            string query = "SELECT ID FROM Users WHERE Username=@Username LIMIT 1";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@Username", username);
+
+            var result = cmd.ExecuteScalar();
+            if (result != null)
+                userID = Convert.ToInt32(result);
+
+            conn.Close();
+            return userID;
+        }
+
+        public static int AddUser(string username)
+        {
+            int newID = 0;
+            var conn = Database.GetConnection();
+            conn.Open();
+
+            // Insert user with minimal required data for reports
+            string query = "INSERT INTO Users (Username) VALUES (@Username)";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@Username", username);
+            cmd.ExecuteNonQuery();
+
+            // Get the auto-generated ID
+            cmd.CommandText = "SELECT LAST_INSERT_ID()";
+            newID = Convert.ToInt32(cmd.ExecuteScalar());
+
+            conn.Close();
+            return newID;
+        }
     }
 }
