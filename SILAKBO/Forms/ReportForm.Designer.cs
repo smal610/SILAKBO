@@ -48,7 +48,7 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Century Schoolbook", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(406, 114);
+            label1.Location = new Point(420, 118);
             label1.Name = "label1";
             label1.Size = new Size(354, 30);
             label1.TabIndex = 0;
@@ -59,9 +59,9 @@
             cmbIncident.Font = new Font("Century Schoolbook", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbIncident.FormattingEnabled = true;
             cmbIncident.Items.AddRange(new object[] { "Verbal Harassment", "Physical Harassment", "Online Harassment", "Stalking", "Other" });
-            cmbIncident.Location = new Point(353, 210);
+            cmbIncident.Location = new Point(233, 219);
             cmbIncident.Name = "cmbIncident";
-            cmbIncident.Size = new Size(468, 28);
+            cmbIncident.Size = new Size(733, 28);
             cmbIncident.TabIndex = 1;
             // 
             // label2
@@ -69,7 +69,7 @@
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Century Schoolbook", 12F, FontStyle.Bold);
-            label2.Location = new Point(353, 251);
+            label2.Location = new Point(233, 258);
             label2.Name = "label2";
             label2.Size = new Size(107, 19);
             label2.TabIndex = 2;
@@ -78,10 +78,10 @@
             // txtDescription
             // 
             txtDescription.Font = new Font("Century Schoolbook", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtDescription.Location = new Point(353, 281);
+            txtDescription.Location = new Point(233, 291);
             txtDescription.Multiline = true;
             txtDescription.Name = "txtDescription";
-            txtDescription.Size = new Size(468, 121);
+            txtDescription.Size = new Size(733, 121);
             txtDescription.TabIndex = 3;
             // 
             // label3
@@ -89,17 +89,16 @@
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Century Schoolbook", 12F, FontStyle.Bold);
-            label3.Location = new Point(353, 413);
+            label3.Location = new Point(233, 430);
             label3.Name = "label3";
             label3.Size = new Size(177, 19);
             label3.TabIndex = 4;
             label3.Text = "Evidence (Optional)";
-            //label3.Click += label3_Click;
             // 
             // btnBrowse
             // 
             btnBrowse.Font = new Font("Century Schoolbook", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBrowse.Location = new Point(703, 444);
+            btnBrowse.Location = new Point(848, 466);
             btnBrowse.Name = "btnBrowse";
             btnBrowse.Size = new Size(118, 29);
             btnBrowse.TabIndex = 6;
@@ -110,9 +109,9 @@
             // btnSubmit
             // 
             btnSubmit.Font = new Font("Century Schoolbook", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSubmit.Location = new Point(353, 490);
+            btnSubmit.Location = new Point(233, 513);
             btnSubmit.Name = "btnSubmit";
-            btnSubmit.Size = new Size(468, 51);
+            btnSubmit.Size = new Size(733, 52);
             btnSubmit.TabIndex = 7;
             btnSubmit.Text = "Submit";
             btnSubmit.UseVisualStyleBackColor = true;
@@ -121,9 +120,9 @@
             // txtEvidence
             // 
             txtEvidence.Font = new Font("Century Schoolbook", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtEvidence.Location = new Point(353, 444);
+            txtEvidence.Location = new Point(233, 468);
             txtEvidence.Name = "txtEvidence";
-            txtEvidence.Size = new Size(344, 27);
+            txtEvidence.Size = new Size(593, 27);
             txtEvidence.TabIndex = 8;
             txtEvidence.Click += txtEvidence_Click;
             txtEvidence.TextChanged += txtEvidence_TextChanged;
@@ -143,7 +142,7 @@
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Century Schoolbook", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(353, 174);
+            label4.Location = new Point(233, 181);
             label4.Name = "label4";
             label4.Size = new Size(100, 19);
             label4.TabIndex = 10;
@@ -152,9 +151,9 @@
             // txtVictimName
             // 
             txtVictimName.Font = new Font("Century Schoolbook", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtVictimName.Location = new Point(470, 170);
+            txtVictimName.Location = new Point(350, 177);
             txtVictimName.Name = "txtVictimName";
-            txtVictimName.Size = new Size(351, 27);
+            txtVictimName.Size = new Size(616, 27);
             txtVictimName.TabIndex = 11;
             // 
             // ReportForm
