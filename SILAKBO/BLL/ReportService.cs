@@ -22,5 +22,15 @@ namespace SILAKBO.BLL
 
             repo.SubmitReport(report);
         }
+
+        internal object? GetAllReports()
+        {
+            throw new NotImplementedException();
+        }
+
+        internal void UpdateStatus(int id, string text)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
