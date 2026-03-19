@@ -22,6 +22,10 @@ namespace SILAKBO.Forms
             currentUser = user;
         }
 
+        public TrackCaseForm()
+        {
+        }
+
         private void TrackCaseForm_Load(object sender, EventArgs e)
         {
             LoadReports();
