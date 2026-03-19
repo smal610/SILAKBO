@@ -1,8 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 using SILAKBO.Models;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Text;
 
 namespace SILAKBO.DAL
 {
@@ -62,6 +63,36 @@ namespace SILAKBO.DAL
 
             conn.Close();
             return reports;
+        }
+
+        //Method that gets reports by user ID
+        public DataTable GetReportsByUserID(int userID)
+        {
+            DataTable table = new DataTable();
+
+            var conn = Database.GetConnection();
+            conn.Open();
+
+            string query = @"
+        SELECT 
+            CaseReference,
+            IncidentType,
+            Description,
+            Status,
+            CreatedAt
+        FROM Reports
+        WHERE UserID = @UserID
+        ORDER BY CreatedAt DESC
+    ";
+
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@UserID", userID);
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+            adapter.Fill(table);
+
+            conn.Close();
+            return table;
         }
     }
 }

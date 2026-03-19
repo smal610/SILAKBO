@@ -7,53 +7,32 @@ using System.Text;
 using System.Windows.Forms;
 using SILAKBO.DAL;
 using MySql.Data.MySqlClient;
+using SILAKBO.BLL;
+using SILAKBO.Models;
 
 namespace SILAKBO.Forms
 {
     public partial class TrackCaseForm : Form
     {
-        public TrackCaseForm()
+        private User currentUser;
+
+        public TrackCaseForm(User user)
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            currentUser = user;
         }
 
         private void TrackCaseForm_Load(object sender, EventArgs e)
         {
-
+            LoadReports();
         }
 
-        private void btnTrack_Click(object sender, EventArgs e)
+        private void LoadReports()
         {
-            var conn = Database.GetConnection();
-            conn.Open();
+            ReportService service = new ReportService();
+            DataTable dt = service.GetReportsByUser(currentUser.ID);
 
-            string query = "SELECT Status FROM Reports WHERE ID=@id";
-
-            MySqlCommand cmd = new MySqlCommand(query, conn);
-            cmd.Parameters.AddWithValue("@id", txtReference.Text);
-
-            MySqlDataReader reader = cmd.ExecuteReader();
-
-            if (reader.Read())
-            {
-                lblStatus.Text = reader["Status"].ToString();
-            }
-            else
-            {
-                lblStatus.Text = "Report not found.";
-            }
-
-            conn.Close();
+            dgvReports.DataSource = dt;
         }
-
-        //private void txtReference_TextChanged(object sender, EventArgs e)
-        //{
-
-        //}
     }
 }

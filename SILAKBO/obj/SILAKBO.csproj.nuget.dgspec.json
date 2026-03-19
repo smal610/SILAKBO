@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Daniel\\source\\repos\\SILAKBO\\SILAKBO\\SILAKBO.csproj": {}
+    "C:\\Users\\Daniel\\source\\repos\\smal610\\SILAKBO\\SILAKBO\\SILAKBO.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Daniel\\source\\repos\\SILAKBO\\SILAKBO\\SILAKBO.csproj": {
+    "C:\\Users\\Daniel\\source\\repos\\smal610\\SILAKBO\\SILAKBO\\SILAKBO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Daniel\\source\\repos\\SILAKBO\\SILAKBO\\SILAKBO.csproj",
+        "projectUniqueName": "C:\\Users\\Daniel\\source\\repos\\smal610\\SILAKBO\\SILAKBO\\SILAKBO.csproj",
         "projectName": "SILAKBO",
-        "projectPath": "C:\\Users\\Daniel\\source\\repos\\SILAKBO\\SILAKBO\\SILAKBO.csproj",
+        "projectPath": "C:\\Users\\Daniel\\source\\repos\\smal610\\SILAKBO\\SILAKBO\\SILAKBO.csproj",
         "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Daniel\\source\\repos\\SILAKBO\\SILAKBO\\obj\\",
+        "outputPath": "C:\\Users\\Daniel\\source\\repos\\smal610\\SILAKBO\\SILAKBO\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -75,7 +75,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
