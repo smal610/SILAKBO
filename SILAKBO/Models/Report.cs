@@ -9,6 +9,7 @@ namespace SILAKBO.Models
         public int ID { get; set; }
 
         public int UserID { get; set; }
+        public string VictimName { get; set; } = "";
 
         public string IncidentType { get; set; } = "";
 
@@ -25,5 +26,6 @@ namespace SILAKBO.Models
         public string Username { get; set; }
         public DateTime DateSubmitted { get; set; }
         public string FilePath { get; set; } // optional
+        public string CaseReference { get; set; } = "";
     }
 }

@@ -28,5 +28,15 @@ namespace SILAKBO.BLL
         {
             return repo.GetReportsByUserID(userID);
         }
+
+        //internal object? GetAllReports()
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        //internal void UpdateStatus(int id, string text)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

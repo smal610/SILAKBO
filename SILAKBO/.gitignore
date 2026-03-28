@@ -1,9 +1,24 @@
-﻿# Visual Studio temporary files
+﻿## Build outputs
+[Bb]in/
+[Oo]bj/
+[Rr]elease/
+[Dd]ebug/
+
+## Visual Studio temporary and user files
 .vs/
 *.user
+*.userosscache
 *.suo
 *.sln.docstates
+*.opendb
+*.dbmdl
 
-# Build outputs
-bin/
-obj/
+## Roslyn and MSBuild temporary files
+*.tmp
+*.cache
+*.log
+
+## Operating System files
+Thumbs.db
+Desktop.ini
+.DS_Store
